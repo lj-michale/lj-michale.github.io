@@ -14,8 +14,9 @@ tags:
 
 ---------------
 
-- [Jobs]()
-  sidebar-avatar: /img/about-luojie.jpg  
+sidebar-avatar: /img/about-luojie.jpg
+
+- [Jobs]() 
   ![img](./imgs/f0a0b2b8b0994a15b95fa7c25f7ba747.png)
   ```.text
    User：hadoop账号，和登录hope时需要的User相同
