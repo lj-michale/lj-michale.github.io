@@ -12,7 +12,7 @@ tags:
     - Git
 ---
 
-> 本文发布于 [BY Blog](http://qiubaiying.github.io)、[简书](http://www.jianshu.com/p/d2d98298b1b8) 转载请保留链接
+> 本文发布于 [Tony Blog](http://qiubaiying.github.io)、[简书](http://www.jianshu.com/p/d2d98298b1b8) 转载请保留链接
 > 
 > 上一篇文章 [《CocoaPods公有仓库的创建》](http://qiubaiying.top/2017/03/08/CocoaPods公有仓库的创建/)
 
