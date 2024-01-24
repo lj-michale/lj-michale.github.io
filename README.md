@@ -54,7 +54,7 @@
 ```
 # Site settings
 title: BY Blog                    # 你的博客网站标题
-SEOTitle: 柏荧的博客 | BY Blog		# SEO 标题
+SEOTitle: Tony的博客 | BY Blog		# SEO 标题
 description: "Hey"	   	   # 随便说点，描述一下
 
 # SNS settings      
