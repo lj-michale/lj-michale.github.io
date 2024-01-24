@@ -58,7 +58,7 @@ SEOTitle: Tony的博客 | BY Blog		# SEO 标题
 description: "Hey"	   	   # 随便说点，描述一下
 
 # SNS settings      
-github_username: qiubaiying     # 你的github账号
+github_username:lj.michale     # 你的github账号
 jianshu_username: e71990ada2fd  # 你的简书ID。
 
 # Build settings
@@ -203,7 +203,7 @@ iframe在不同的设备中，将会自动的调整大小。保留内边距是�
 ```
 # 评论系统
 # Disqus（https://disqus.com/）
-disqus_username: qiubaiying
+disqus_username:lj.michale
 ```
 
 #### Gitalk
