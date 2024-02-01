@@ -54,7 +54,10 @@ mindmap2: false
     <font size=5>尺寸</font> </br>
     <font face="黑体" color=green size=5>黑体，绿色，尺寸为5（任意内容）</font>  </br>
 
-
+  - [强调]() </br>
+    **凡有所学，皆成性格。** </br>
+    __凡有所学，皆成性格。__*凡有所学，皆成性格。* </br>
+    _凡有所学，皆成性格。_ </br>
 
 
 
