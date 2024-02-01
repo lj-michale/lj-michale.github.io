@@ -5,9 +5,9 @@ baseurl:
 url: https://lj-michale.github.io/
 date_format: "ordinal"
 title: Power Data
-subtitle: "公众号：数据搬砖人"
-description: "罗杰的个人博客，公众号：数据搬砖人"
-keywords: Power Data, Tony, lj-michale, mazhuang, 数据搬砖人
+subtitle: "公众号：数据达人"
+description: "罗杰的个人博客，公众号：数据达人"
+keywords: Power Data, Tony, lj-michale, mazhuang, 数据达人
 timezone: Asia/Shanghai
 encoding: "utf-8"
 # 页面左下角显示的年份
@@ -40,7 +40,7 @@ components:
   # 修改图片请替换 assets/images/qrcode.jpg
   qrcode:
     enabled: true
-    image_alt: 数据搬砖人
+    image_alt: 数据达人
   # 维基索引页使用哪种视图，支持 列表（list）/分类（cate）
   wiki:
     view: cate
