@@ -6,8 +6,8 @@ url: https://lj-michale.github.io/
 date_format: "ordinal"
 title: 码志
 subtitle: "公众号：数据搬砖人"
-description: "马壮的个人博客，公众号：数据搬砖人"
-keywords: 码志, Zhuang Ma, lj-michale, mazhuang, 数据搬砖人
+description: "罗杰的个人博客，公众号：数据搬砖人"
+keywords: 码志, Tony, lj-michale, mazhuang, 数据搬砖人
 timezone: Asia/Shanghai
 encoding: "utf-8"
 # 页面左下角显示的年份
@@ -57,7 +57,7 @@ highlight_theme: github
 # ---------------- #
 #      Author      #
 # ---------------- #
-author: Zhuang Ma
+author: Tony
 organization:
 organization_url:
 github_username: lj-michale
