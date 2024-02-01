@@ -70,6 +70,14 @@ mindmap2: false
     <img src="/images/posts/windows/rclick.png" alt="Windows Skills" /> <br>
     ![img](/images/posts/cplusplus/staticstring_helloworld.png) <br>
 
+    
+  - [文本]()
+    ```.text
+     文本块内容
+    ```
+
+
+
 <h4 align="left"> 结论 </h4>
 
 ---------------
