@@ -49,7 +49,6 @@ mindmap2: false
     <font face="微软雅黑">微软雅黑</font> <br>
     <font face="STCAIYUN">华文彩云</font> <br>
     <font color=blue>蓝色</font> <br>
-    <font color=#008000>绿色</font> <br>
     <font color=Red>红色</font> <br>
     <font size=5>尺寸</font> <br>
     <font face="黑体" color=green size=5>黑体，绿色，尺寸为5（任意内容）</font>  <br>
