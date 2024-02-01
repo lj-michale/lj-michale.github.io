@@ -94,7 +94,7 @@ The openssl extension is required for SSL/TLS protection but is not available. I
 3. 放置 so 文件到正确位置
 
    ```sh
-   cp modules/memcache.so /usr/local/php7/lib/php/extensions/no-debug-non-zts-20151012/memcache.so
+   cp modules/memcache.so /usr/local/php7/lib/php/extensions/no-debug-non-zts-20161012/memcache.so
    ```
 
    目标路径可以在 phpinfo() 的 `extension_dir` 字段找到。
