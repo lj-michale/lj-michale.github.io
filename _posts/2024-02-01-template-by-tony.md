@@ -65,10 +65,10 @@ mindmap2: false
     __凡有所学，皆成性格。__*凡有所学，皆成性格。* 
     _凡有所学，皆成性格。_ 
 
-  - [图片]()
-    ![img](/images/posts/windows/rclick.png)
-    <img src="/images/posts/windows/rclick.png" alt="Windows Skills" />
-    ![img](/images/posts/cplusplus/staticstring_helloworld.png)
+  - [图片]() <br>
+    ![img](/images/posts/bigdata/spark/2020092111554018.png) <br>
+    <img src="/images/posts/windows/rclick.png" alt="Windows Skills" /> <br>
+    ![img](/images/posts/cplusplus/staticstring_helloworld.png) <br>
 
 <h4 align="left"> 结论 </h4>
 
