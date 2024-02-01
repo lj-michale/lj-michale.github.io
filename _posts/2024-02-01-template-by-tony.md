@@ -53,6 +53,12 @@ mindmap2: false
     <font color=Red>红色</font> </br>
     <font size=5>尺寸</font> </br>
     <font face="黑体" color=green size=5>黑体，绿色，尺寸为5（任意内容）</font>  </br>
+    - [放大加粗字体]() </br>
+      <h1>想要放大的字体</h1> </br> 
+      <h2>想要放大的字体</h2>  </br>
+      <h3>想要放大的字体</h3>  </br>
+      <h4>想要放大的字体</h4>  </br>
+      <h5>想要放大的字体</h5>  </br>
 
   - [强调]() </br>
     **凡有所学，皆成性格。** </br>
