@@ -21,8 +21,8 @@
 }
 
 .pagination a.active {
-    background: #337ab7;
-    border-color: #337ab7;
+    background: #efbb86;
+    border-color: #efbb86;
     z-index: 2;
     color: #fff;
     cursor: default
