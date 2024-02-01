@@ -151,7 +151,7 @@ public class Test {
 
 好了以上就是在 Android 里集成 slf4j + logback 的记录了，至此我「统一」了 Java 后端和 Android 客户端打印日志的用法，在避免多项目维护造成「精神分裂」的路上前进了一小步。
 
-本文所列代码示例已上传至 GitHub，地址：<https://github.com/mzlogin/AndroidPractices/tree/master/android-studio/LogbackDemo>
+本文所列代码示例已上传至 GitHub，地址：<https://github.com/lj-michale/AndroidPractices/tree/master/android-studio/LogbackDemo>
 
 以上步骤供有类似需求的同学参考，同时强烈建议以官方文档为主。如果有更好的方案，欢迎留言讨论交流。
 
@@ -160,4 +160,4 @@ public class Test {
 - <https://github.com/tony19/logback-android>
 - <https://projectlombok.org/setup/android>
 - <https://gitee.com/sgpublic/lombok-plugin-repository>
-- <https://github.com/mzlogin/AndroidPractices/tree/master/android-studio/LogbackDemo>
+- <https://github.com/lj-michale/AndroidPractices/tree/master/android-studio/LogbackDemo>

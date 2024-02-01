@@ -6,7 +6,7 @@ cate2:
 description: 一份简明的 AsciiDoc 教程
 keywords: AsciiDoc
 type: link
-link: https://github.com/mzlogin/asciidoc-intro
+link: https://github.com/lj-michale/asciidoc-intro
 ---
 
 Content here

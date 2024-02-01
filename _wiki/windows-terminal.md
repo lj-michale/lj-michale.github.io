@@ -23,7 +23,7 @@ Windows Terminal 是微软打造的一款新的控制台终端，目前还在 Pr
 New-Item -ItemType SymbolicLink -Path ~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/RoamingState/profiles.json -Target ~/windows-terminal-profiles.json
 ```
 
-我的 Windows Terminal 文件见 <https://github.com/mzlogin/config-files/blob/master/windows-terminal-profiles.json>
+我的 Windows Terminal 文件见 <https://github.com/lj-michale/config-files/blob/master/windows-terminal-profiles.json>
 
 ## 通过 git 管理 PowerShell 配置
 
@@ -41,7 +41,7 @@ New-Item -ItemType SymbolicLink -Path <我的文档>/PowerShell/Microsoft.PowerS
 
 上面两个目录需要使用绝对路径，不然会报错。
 
-我的 PowerShell 配置见 <https://github.com/mzlogin/config-files/blob/master/powershell.ps1>
+我的 PowerShell 配置见 <https://github.com/lj-michale/config-files/blob/master/powershell.ps1>
 
 ## 自定义快捷键
 

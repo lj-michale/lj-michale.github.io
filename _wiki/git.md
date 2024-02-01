@@ -648,8 +648,8 @@ It is also possible that a host key has just been changed.
 The fingerprint for the ECDSA key sent by the remote host is
 SHA256:bud2tDwxl9687vMOUUBGXlwZhjxDTu7eVF43ojAu1Pw.
 Please contact your system administrator.
-Add correct host key in /c/Users/mzlogin/.ssh/known_hosts to get rid of this message.
-Offending ECDSA key in /c/Users/mzlogin/.ssh/known_hosts:1
+Add correct host key in /c/Users/lj-michale/.ssh/known_hosts to get rid of this message.
+Offending ECDSA key in /c/Users/lj-michale/.ssh/known_hosts:1
 ECDSA host key for gitlab.xxxx.com has changed and you have requested strict checking.
 Host key verification failed.
 fatal: Could not read from remote repository.

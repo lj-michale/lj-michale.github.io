@@ -6,7 +6,7 @@ cate2:
 description: some word here
 keywords: keyword1, keyword2
 type: link
-link: https://github.com/mzlogin/android-reverse-engineering
+link: https://github.com/lj-michale/android-reverse-engineering
 ---
 
 Content here

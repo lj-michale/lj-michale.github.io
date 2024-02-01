@@ -45,5 +45,5 @@ mindmap2: false
 [2]: https://github.com/github/copilot.vim
 [3]: https://github.com/521xueweihan/HelloGitHub
 [4]: https://github.com/996icu/996.ICU
-[5]: https://github.com/mzlogin/awesome-adb
+[5]: https://github.com/lj-michale/awesome-adb
 [6]: https://github.com/akirataguchi115

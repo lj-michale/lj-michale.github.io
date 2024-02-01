@@ -8,7 +8,7 @@ keywords: Markdown, VSCode
 
 为部门内知识分享准备的素材，记录了 Markdown 的优点、应用场景和编辑工具，介绍了标准语法与扩展语法，以及一些应用 Markdown 的奇技淫巧。个人使用 Markdown 的经验持续补充中，最新完整版请参见
 
-<https://github.com/mzlogin/markdown-intro>
+<https://github.com/lj-michale/markdown-intro>
 
 ---
 
@@ -278,39 +278,39 @@ Markdown 支持行内式链接和引用式链接。
 ```
 行内式 [博客](https://mazhuang.org "我的个人博客") 链接，带 title。
 
-行内式 [GitHub](https://github.com/mzlogin) 链接。
+行内式 [GitHub](https://github.com/lj-michale) 链接。
 
 引用式 [博客][1] 链接。
 
 引用式 [GitHub][2] 链接，带 title。
 
 [1]: https://mazhuang.org
-[2]: https://github.com/mzlogin "我的 GitHub 主页"
+[2]: https://github.com/lj-michale "我的 GitHub 主页"
 ```
 
 **预览效果：**
 
 行内式 [博客](https://mazhuang.org "我的个人博客") 链接，带 title。
 
-行内式 [GitHub](https://github.com/mzlogin) 链接。
+行内式 [GitHub](https://github.com/lj-michale) 链接。
 
 引用式 [博客][1] 链接。
 
 引用式 [GitHub][2] 链接，带 title。
 
 [1]: https://mazhuang.org
-[2]: https://github.com/mzlogin "我的 GitHub 主页"
+[2]: https://github.com/lj-michale "我的 GitHub 主页"
 
 **对应 HTML：**
 
 ```html
 <p>行内式 <a href="https://mazhuang.org" title="我的个人博客">博客</a> 链接，带 title。</p>
 
-<p>行内式 <a href="https://github.com/mzlogin">GitHub</a> 链接。</p>
+<p>行内式 <a href="https://github.com/lj-michale">GitHub</a> 链接。</p>
 
 <p>引用式 <a href="https://mazhuang.org">博客</a> 链接。</p>
 
-<p>引用式 <a href="https://github.com/mzlogin" title="我的 GitHub 主页">GitHub</a> 链接，带 title。</p>
+<p>引用式 <a href="https://github.com/lj-michale" title="我的 GitHub 主页">GitHub</a> 链接，带 title。</p>
 ```
 
 ### 图片
@@ -531,11 +531,11 @@ Markdown 标记语言的目的不是替代 HTML，也不是发明一种更便捷
 
 如果是在 GitHub / GitLab 的 Issue 里，会附赠任务完成比例提示效果：
 
-![task list 1](https://raw.githubusercontent.com/mzlogin/markdown-intro/master/assets/task-list-1.png)
+![task list 1](https://raw.githubusercontent.com/lj-michale/markdown-intro/master/assets/task-list-1.png)
 
 还可以直接在网页上拖动调整顺序，勾选和取消勾选。
 
-![task list 2](https://raw.githubusercontent.com/mzlogin/markdown-intro/master/assets/task-list-2.png)
+![task list 2](https://raw.githubusercontent.com/lj-michale/markdown-intro/master/assets/task-list-2.png)
 
 ### 删除线
 
@@ -615,15 +615,15 @@ https://github.com
 
 以我们使用的项目管理工具 TAPD 的在线编辑器为例：
 
-![流程图](https://raw.githubusercontent.com/mzlogin/markdown-intro/master/assets/tapd-markdown-flowchart.png)
+![流程图](https://raw.githubusercontent.com/lj-michale/markdown-intro/master/assets/tapd-markdown-flowchart.png)
 
-![时序图](https://raw.githubusercontent.com/mzlogin/markdown-intro/master/assets/tapd-markdown-seq.png)
+![时序图](https://raw.githubusercontent.com/lj-michale/markdown-intro/master/assets/tapd-markdown-seq.png)
 
 ### 插入数学公式
 
 仍然以 TAPD 为例：
 
-![数学公式](https://raw.githubusercontent.com/mzlogin/markdown-intro/master/assets/tapd-markdown-math.png)
+![数学公式](https://raw.githubusercontent.com/lj-michale/markdown-intro/master/assets/tapd-markdown-math.png)
 
 应该是利用 JavaScript 支持了 LaTeX 公式语法。
 
@@ -637,7 +637,7 @@ https://github.com
 
 我维护的工具地址：<https://md.mazhuang.org>
 
-![微信公众号](https://raw.githubusercontent.com/mzlogin/markdown-intro/master/assets/wechat-markdown.png)
+![微信公众号](https://raw.githubusercontent.com/lj-michale/markdown-intro/master/assets/wechat-markdown.png)
 
 ### 更多
 

@@ -6,7 +6,7 @@ description: 阅读源码不是唯一的学习方法，但是是很重要的学�
 keywords: Android, 源码, rtfsc
 ---
 
-思索了这两个问题良久，也去知乎找了一些相关话题的问答，但并没有标准答案。所以，我这里也只是记录一些我对此的看法，也许会随着 RTFSC 阅历的丰富而发生变化，我会记录更新于 <https://github.com/mzlogin/rtfsc-android>。
+思索了这两个问题良久，也去知乎找了一些相关话题的问答，但并没有标准答案。所以，我这里也只是记录一些我对此的看法，也许会随着 RTFSC 阅历的丰富而发生变化，我会记录更新于 <https://github.com/lj-michale/rtfsc-android>。
 
 ## 意义
 

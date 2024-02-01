@@ -52,4 +52,4 @@ function DoSend2RootDomain(oSessions: Fiddler.Session[]){
 
 ### 附注
 
-我使用的完整最新的 CustomRules.js 文件我上传到了一个 Gist 里，详见：<https://gist.github.com/mzlogin/3c5f9781c5bedff3fcfb>，如果想直接使用可以复制脚本内容后放置到「我的文档 /Fiddler 2/Scripts/CustomRules.js」，也可以在此目录下使用 git 抓取我的最新定制 js 文件。
+我使用的完整最新的 CustomRules.js 文件我上传到了一个 Gist 里，详见：<https://gist.github.com/lj-michale/3c5f9781c5bedff3fcfb>，如果想直接使用可以复制脚本内容后放置到「我的文档 /Fiddler 2/Scripts/CustomRules.js」，也可以在此目录下使用 git 抓取我的最新定制 js 文件。

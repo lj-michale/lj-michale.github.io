@@ -113,4 +113,4 @@ Toast
 
 <div align="center"><img width="192px" height="192px" src="https://mazhuang.org/assets/images/qrcode.jpg"/></div>
 
-后续相关的系列文章，会在 GitHub 仓库 [mzlogin/rtfsc-android](https://github.com/mzlogin/rtfsc-android) 汇总更新，欢迎关注，看我起高楼，或是啪啪打脸。
+后续相关的系列文章，会在 GitHub 仓库 [lj-michale/rtfsc-android](https://github.com/lj-michale/rtfsc-android) 汇总更新，欢迎关注，看我起高楼，或是啪啪打脸。

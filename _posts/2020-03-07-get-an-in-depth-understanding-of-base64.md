@@ -122,7 +122,7 @@ public class CustomBase64Encoder {
 }
 ```
 
-这部分源码我也上传到 GitHub 仓库 <https://github.com/mzlogin/spring-practices> 的 base64test 工程里了。
+这部分源码我也上传到 GitHub 仓库 <https://github.com/lj-michale/spring-practices> 的 base64test 工程里了。
 
 ## 4. 其它知识点
 

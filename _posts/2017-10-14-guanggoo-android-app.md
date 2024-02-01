@@ -31,7 +31,7 @@ keywords: Android, 光谷社区
 
 源码放在 GitHub 上：
 
-<https://github.com/mzlogin/guanggoo-android>
+<https://github.com/lj-michale/guanggoo-android>
 
 部分界面截图：
 
@@ -79,7 +79,7 @@ keywords: Android, 光谷社区
 
 经过几周业余时间和十一长假期间的开发，目前完成度不算特别高，但常用的功能已经基本可用了，当然还有一些功能比如注册、帖子里的外部链接打开等，我是先抛给了系统浏览器。想着只埋头自己开发也比较枯燥，决定先放出一个版本来让网友们吐吐槽，提提意见，应该能做得更好。
 
-PS: 本文非软文，也没有收取光谷社区任何好处，请光谷社区嘴炮管理员看到这里帮我开通个 VIP，我的社区 ID 是 mzlogin，:-P。
+PS: 本文非软文，也没有收取光谷社区任何好处，请光谷社区嘴炮管理员看到这里帮我开通个 VIP，我的社区 ID 是 lj-michale，:-P。
 
 ---
 

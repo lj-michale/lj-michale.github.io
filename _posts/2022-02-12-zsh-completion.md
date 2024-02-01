@@ -52,7 +52,7 @@ _git_merge_to_comp()
 
 `git_branches=("${(@f)$(git branch --format='%(refname:short)')}")` 的意思是，将 `git branch --format='%(refname:short)'` 命令的输出按行分割后形成一个字符串数组，赋值给 `git_branches` 变量，这部分可以参考 [How to properly collect an array of lines in zsh][]。
 
-我的 zsh 配置都上传到了 <https://github.com/mzlogin/config-files>，有需要可以参考下。
+我的 zsh 配置都上传到了 <https://github.com/lj-michale/config-files>，有需要可以参考下。
 
 ## 效果演示
 

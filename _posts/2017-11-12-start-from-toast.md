@@ -6,7 +6,7 @@ description: Android 源码分析，深入解析 Toast。
 keywords: RTFSC, Android, Toast
 ---
 
-本系列文章在 <https://github.com/mzlogin/rtfsc-android> 持续更新中，欢迎有兴趣的童鞋们关注。
+本系列文章在 <https://github.com/lj-michale/rtfsc-android> 持续更新中，欢迎有兴趣的童鞋们关注。
 
 ![](/images/posts/android/toast.png)
 

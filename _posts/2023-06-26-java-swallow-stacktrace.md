@@ -109,7 +109,7 @@ Process finished with exit code 137 (interrupted by signal 9: SIGKILL)
 
 运行了几百万次也不会出现异常堆栈丢失的情况，手动终止程序。
 
-完整源码见：<https://github.com/mzlogin/java-notes/blob/master/src/org/mazhuang/StackTraceInFastThrowDemo.java>
+完整源码见：<https://github.com/lj-michale/java-notes/blob/master/src/org/mazhuang/StackTraceInFastThrowDemo.java>
 
 ## 参考
 

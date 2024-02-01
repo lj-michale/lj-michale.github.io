@@ -81,7 +81,7 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
 
 ## 联系我
 
-如果对本博客模板或者内容有任何建议，可以通过 [Issues](https://github.com/mzlogin/mzlogin.github.io/issues) 或者微信公众号「闷骚的程序员」与我取得联系。
+如果对本博客模板或者内容有任何建议，可以通过 [Issues](https://github.com/lj-michale/lj-michale.github.io/issues) 或者微信公众号「闷骚的程序员」与我取得联系。
 
 <img width="192px" height="192px" src="https://mazhuang.org/assets/images/qrcode.jpg"/>
 
@@ -89,6 +89,6 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
 
 本博客外观基于 [DONGChuan](https://dongchuan.github.io) 修改，感谢！
 
-[1]: https://github.com/mzlogin/chinese-copywriting-guidelines
+[1]: https://github.com/lj-michale/chinese-copywriting-guidelines
 [2]: https://help.github.com/articles/setting-up-your-pages-site-locally-with-jekyll/
-[3]: https://github.com/mzlogin/mzlogin.github.io/issues/2
+[3]: https://github.com/lj-michale/lj-michale.github.io/issues/2

@@ -99,7 +99,7 @@ public class GroovyOomDemoApplication implements CommandLineRunner {
 
 设置最大元空间大小、打印类的 load/unload、以及 GC 的信息。
 
-*测试代码发布在 <https://github.com/mzlogin/groovy-oom-demo>*
+*测试代码发布在 <https://github.com/lj-michale/groovy-oom-demo>*
 
 ### 使用 groovy-all 2.4.7 版本运行的情况
 

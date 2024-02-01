@@ -1,9 +1,9 @@
 - sitename: GitHub
-  name: mzlogin
-  url: https://github.com/mzlogin
+  name: lj-michale
+  url: https://github.com/lj-michale
 
 - sitename: 掘金
-  name: mzlogin
+  name: lj-michale
   url: http://gold.xitu.io/user/570ddaeb2e958a005c63b2da
 
 - sitename: LinkedIn
@@ -15,12 +15,12 @@
   url: http://mazhuang.org
 
 - sitename: 微博
-  name: mzlogin
-  url: http://weibo.com/mzlogin
+  name: lj-michale
+  url: http://weibo.com/lj-michale
 
 - sitename: 知乎
-  name: mzlogin
-  url: http://www.zhihu.com/people/mzlogin
+  name: lj-michale
+  url: http://www.zhihu.com/people/lj-michale
 
 - sitename: 豆瓣
   name: 闷骚的程序员
