@@ -29,7 +29,7 @@ mindmap2: false
 ---------------
 
 - [markdown语法]()
-  - [横线]() </br>
+  - [横线]() 
     <hr style=" height:2px;border:none;border-top:2px dotted #185598;" />
     <!-- 
       类型：园点虚线
@@ -44,26 +44,26 @@ mindmap2: false
     <hr style="height:5px;border:none;border-top:5px ridge green;" />
     <hr style="height:10px;border:none;border-top:10px groove skyblue;" />
     
-  - [字体]() </br>
-    <font face="黑体">黑体字</font> </br>
-    <font face="微软雅黑">微软雅黑</font> </br>
-    <font face="STCAIYUN">华文彩云</font> </br>
-    <font color=blue>蓝色</font> </br>
-    <font color=#008000>绿色</font> </br>
-    <font color=Red>红色</font> </br>
-    <font size=5>尺寸</font> </br>
-    <font face="黑体" color=green size=5>黑体，绿色，尺寸为5（任意内容）</font>  </br>
-    - [放大加粗字体]() </br>
-      <h1>想要放大的字体</h1> </br> 
-      <h2>想要放大的字体</h2>  </br>
-      <h3>想要放大的字体</h3>  </br>
-      <h4>想要放大的字体</h4>  </br>
-      <h5>想要放大的字体</h5>  </br>
+  - [字体]() 
+    <font face="黑体">黑体字</font> 
+    <font face="微软雅黑">微软雅黑</font> 
+    <font face="STCAIYUN">华文彩云</font> 
+    <font color=blue>蓝色</font> 
+    <font color=#008000>绿色</font> 
+    <font color=Red>红色</font> 
+    <font size=5>尺寸</font> 
+    <font face="黑体" color=green size=5>黑体，绿色，尺寸为5（任意内容）</font>  
+    - [放大加粗字体]() 
+      <h1>想要放大的字体</h1>  
+      <h2>想要放大的字体</h2>  
+      <h3>想要放大的字体</h3>  
+      <h4>想要放大的字体</h4>  
+      <h5>想要放大的字体</h5>  
 
-  - [强调]() </br>
-    **凡有所学，皆成性格。** </br>
-    __凡有所学，皆成性格。__*凡有所学，皆成性格。* </br>
-    _凡有所学，皆成性格。_ </br>
+  - [强调]() 
+    **凡有所学，皆成性格。** 
+    __凡有所学，皆成性格。__*凡有所学，皆成性格。* 
+    _凡有所学，皆成性格。_ 
 
 
 
