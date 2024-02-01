@@ -169,9 +169,9 @@ beaudar:
 # giscus 配置参考：https://giscus.app/zh-CN
 giscus:
   repo: lj-michale/blog-comments
-  repo-id: MDEwOlJlcG9zaXRvcnk5MzEyNzkxNw==
+  repo-id: R_kgDOLMdtUw
   category: Announcements
-  category-id: DIC_kwDOBY0E7c4CRtg9
+  category-id: DIC_kwDOLMdtU84Cc3Si
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : false
 
