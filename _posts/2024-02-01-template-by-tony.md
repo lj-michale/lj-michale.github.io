@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tony|文档撰写模板
+title: Tony | 文档撰写模板
 categories: [Markdown]
 description: Markdown文档撰写模板范例
 keywords: Java, Markdown, Flink, Tony
