@@ -12,9 +12,9 @@ mindmap: false
 mindmap2: false
 ---
 
-## Flink WebUI是什么？
+## 是什么？
 
-## Flink WebUI怎么使用？
+## 怎么用？
 
 ### 界面介绍
 
