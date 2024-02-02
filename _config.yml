@@ -100,6 +100,11 @@ navs:
     mobile-hidden: true
 
   -
+    href: /cooperate/
+    label: 合作
+    mobile-hidden: true
+
+  -
     href: /about/
     label: 关于
 
