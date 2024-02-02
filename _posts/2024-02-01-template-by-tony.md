@@ -51,7 +51,7 @@ mindmap2: false
     <font color=blue>蓝色</font>
     <font color=Red>红色</font>
     <font size=5>尺寸</font> 
-    <font face="黑体" color=green size=5>黑体，绿色，尺寸为5（任意内容）</font> 
+    <font face="黑体" color=green size=5>黑体，绿色，尺寸为5</font> 
     - [放大加粗字体]() <br>
       <h1>想要放大的字体</h1> 
       <h2>想要放大的字体</h2> 
