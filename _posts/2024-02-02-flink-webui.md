@@ -2,7 +2,7 @@
 layout: post
 title: Tony | Flink WebUI
 categories: [Flink]
-description: 基于Flink1.18的Flink WebUI 详解
+description: Flink WebUI 详解 (基于Flink1.18)
 keywords: Flink
 mermaid: false
 sequence: false
