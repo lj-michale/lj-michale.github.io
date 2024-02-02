@@ -1,6 +1,7 @@
 .home .banner,
 .home .site-header {
-    background: #af9c52;
+    /*background: #af9c52;*/
+    background-image: url("../../images/post-bg-universe.jpg");
     color: #fff
 }
 
