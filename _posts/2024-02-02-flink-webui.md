@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tony | Flink WebUI
+title: Flink | Flink WebUI
 categories: [Flink]
 description: Flink WebUI 详解 (基于Flink1.18)
 keywords: Flink
