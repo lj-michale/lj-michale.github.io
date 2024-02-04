@@ -12,6 +12,7 @@ mindmap: false
 mindmap2: false
 ---
 
+## 数据交易所商业模式分析
 
 
 
