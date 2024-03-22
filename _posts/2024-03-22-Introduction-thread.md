@@ -236,6 +236,44 @@ ANRCanary 抓到的上报信息如下：
 基于 viewId 、动画时长、属性变化值等信息，快速定位到问题代码，确认了导致泄露的原因并修复。    
 ```
 ### 案例 4：定时任务执行异常导致死循环
+本案例为一个隐蔽且复杂的死循环问题，解决过程极具挑战性，耗时甚长。
+ANRCanary 抓到的上报信息如下：
+```.json
+"case:-2147483648":{
+  "name":"Timer-0",
+  "threadCPURate":0.*,
+  "threadStackList":[
+    "android.os.MessageQueue.enqueueMessage(MessageQueue.java:577)",
+    "android.os.Handler.enqueueMessage(Handler.java:662)",
+    "android.os.Handler.sendMessageAtTime(Handler.java:631)",
+    "android.os.Handler.sendMessageDelayed(Handler.java:601)",
+    "android.os.Handler.postDelayed(Handler.java:429)",
+    "de.executor(SourceFile:31)",
+    "tm.query(SourceFile:268)",
+    "mk.start(SourceFile:166)",
+    "mk$1.run(SourceFile:93)",
+    "java.util.TimerThread.mainLoop(Timer.java:555)",
+    "java.util.TimerThread.run(Timer.java:505)"
+  ]
+}
+从死循环信息来看：
+1.发生死循环的线程名为：Timer-0 。
+2.该线程相对于整个进程，CPU 占用率也很高。
+3.死循环的原因看起来是某个消息队列被打满导致。
+  3.1 因为 Handler 的消息队列被打满之后，每次 postDelayed 调用都要执行一次插入排序遍历整个队列。
+监控能力增强->经过翻阅代码，确认代码中有一个周期性任务。周期性任务的实现方式采用的是 Java 提供的 Timer 类。正常情况下应该不会导致消息队列被打满才对。
+ANRCanary 在感知到消息队列疑似被打满以后，需要收集更多信息来进行确认情况。
+大致方案为：  
+```
+![img](/images/posts/thread/25rqeahlh.jpg)<br>
+
+
+
+
+
+
+
+
 
 
 
