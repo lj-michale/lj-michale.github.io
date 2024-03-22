@@ -159,7 +159,82 @@ ANRCanary 抓到的上报信息如下：
 5.原因是因为钉钉使用的 Lottie 版本太低导致，升级 Lottie 版本之后该问题得到解决。
 ```
 ### 案例 3：属性动画泄露导致高 CPU 消耗
-
+ANRCanary 抓到的上报信息如下：
+```.json
+"case:-647468375":{
+  "name":"main",
+  "threadCPURate":0.*,
+  "threadStackList":[
+    "android.graphics.drawable.LayerDrawable.setAlpha(LayerDrawable.java:1364)",
+    "android.animation.ObjectAnimator.animateValue(ObjectAnimator.java:990)",
+    "android.animation.ValueAnimator.animateBasedOnTime(ValueAnimator.java:1349)",
+    "android.animation.ValueAnimator.doAnimationFrame(ValueAnimator.java:1481)",
+    "android.animation.AnimationHandler.doAnimationFrame(AnimationHandler.java:146)",
+    "android.animation.AnimationHandler$1.doFrame(AnimationHandler.java:54)",
+    "android.view.Choreographer.doCallbacks(Choreographer.java:1047)",
+    "android.view.Choreographer.doFrame(Choreographer.java:914)",
+    "android.os.Handler.dispatchMessage(Handler.java:100)",
+    "android.os.Looper.loop(Looper.java:214)",
+    "android.app.ActivityThread.main(ActivityThread.java:7659)",
+    "com.android.internal.os.ZygoteInit.main(ZygoteInit.java:938)"
+  ]
+}
+从死循环信息来看：
+1.死循环发生在主线程。
+2.主线程相对于整个进程，CPU 占用率非常高，大量抢占了子线程的 CPU 时间片。
+3.堆栈里没有业务堆栈，因此暂时无法定位到问题代码。只能看出是发生了属性动画泄露，需要增加监控能力。
+监控能力增强->ANRCanary 在感知到发生属性动画泄露以后，需要将发生泄露的属性动画揪出来。
+大致方案为：
+1.从系统 AnimationHandler 类入手，获取到当前运行中的属性动画实例列表。
+2.从属性动画实例中提取关键信息，并附加到 ANRCanary 日志中上报。
+能力增强后的 ANRCanary 抓到的上报信息如下：
+"case:-647468375":{
+  "attachInfo":{
+    "animatorList":[
+      {
+        "duration":1200,
+        "propertyList":[
+          {
+            "clazz":"IntPropertyValuesHolder",
+            "message":"alpha:  25  255  "
+          }
+        ],
+        "repeatCount":-1,
+        "target":"android.graphics.drawable.LayerDrawable",
+              "viewPath":"TextView:recording|RelativeLayout:0|RelativeLayout:0"
+      },
+      ...
+  },
+  "name":"main",
+  "threadCPURate":0.*,
+  "threadStackList":[
+    "android.graphics.drawable.LayerDrawable.setAlpha(LayerDrawable.java:1364)",
+    "android.animation.ObjectAnimator.animateValue(ObjectAnimator.java:990)",
+    "android.animation.ValueAnimator.animateBasedOnTime(ValueAnimator.java:1349)",
+    "android.animation.ValueAnimator.doAnimationFrame(ValueAnimator.java:1481)",
+    "android.animation.AnimationHandler.doAnimationFrame(AnimationHandler.java:146)",
+    "android.animation.AnimationHandler$1.doFrame(AnimationHandler.java:54)",
+    "android.view.Choreographer.doCallbacks(Choreographer.java:1047)",
+    "android.view.Choreographer.doFrame(Choreographer.java:914)",
+    "android.os.Handler.dispatchMessage(Handler.java:100)",
+    "android.os.Looper.loop(Looper.java:214)",
+    "android.app.ActivityThread.main(ActivityThread.java:7659)",
+    "com.android.internal.os.ZygoteInit.main(ZygoteInit.java:938)"
+  ]
+}
+从附加信息来看，泄露的属性动画为：
+1.duration：该动画时长为 1200 毫秒。
+2.propertyList：
+ 2.1 clazz：属性值的类型为 int 。
+ 2.2 message：属性名为 alpha，属性变化值为从 25 到 255。
+3.repeatCount：循环次数为 -1 ，即无限循环永远不停止，难怪会发生泄露。
+4.target：alpha 属性所属的对象类型为：LayerDrawable 。
+5.viewPath：
+  5.1 LayerDrawable 所属的 View 类型为 TextView。
+  5.2 该 TextView 的 viewId 为 recording 。
+  5.3 该 TextView 的父辈节点均为 RelativeLayout 类型。
+基于 viewId 、动画时长、属性变化值等信息，快速定位到问题代码，确认了导致泄露的原因并修复。    
+```
 ### 案例 4：定时任务执行异常导致死循环
 
 
