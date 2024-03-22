@@ -12,7 +12,7 @@ mindmap: false
 mindmap2: false
 ---
 
-## 背景
+## 背景 <br>
 Q: 线程死循环问题可能会导致高耗电，界面卡顿，耗尽内存等性能问题。与此同时，死循环问题还具有隐蔽性高，黑盒测试无法感知的特点。<br>
 A: 本文旨在介绍死循环检测工具建设的思路和典型案例的修复历程。希望通过此次分享，对同样面临类似死循环问题的团队能够有所启发。<br>
 
@@ -124,9 +124,40 @@ ANRCanary 抓到的上报信息如下：<br>
     ]
   }
 }
+从死循环信息来看：
+1.两个线程堆栈均为高 CPU 线程，且最后都是在操作 HashMap。很明显是踩到了 HashMap 多线程不安全的这个坑。
+2.将对应 HashMap 的使用改为 ConcurrentHashMap 之后，该问题得到解决。
 ```
 ### 案例 2：Lottie 动画后台未停止导致高 CPU 消耗
-
+ANRCanary 抓到的上报信息如下：
+```.json
+"case:-1056518995":{
+  "name":"main",
+  "threadCPURate":0.*,
+  "threadStackList":[
+        "com.airbnb.lottie.LottieAnimationView.invalidateDrawable(SourceFile:189)",
+    "com.airbnb.lottie.LottieDrawable.invalidateSelf(SourceFile:261)",
+    "lb.onValueChanged(SourceFile:100)",
+        "com.airbnb.lottie.animation.keyframe.BaseKeyframeAnimation.b(SourceFile:60)",
+    "nj.a(SourceFile:427)",
+      "com.airbnb.lottie.LottieDrawable$1.onAnimationUpdate(SourceFile:103)",
+    "pb.c(SourceFile:88)",
+    "pd.doFrame(SourceFile:96)",
+    "android.view.Choreographer$CallbackRecord.run(Choreographer.java:785)",
+    "android.view.Choreographer.doFrame(Choreographer.java:568)",
+    "android.os.Handler.dispatchMessage(Handler.java:95)",
+    "android.os.Looper.loop(Looper.java:136)",
+    "android.app.ActivityThread.main(ActivityThread.java:5336)",
+    "com.android.internal.os.ZygoteInit.main(ZygoteInit.java:689)"
+  ]
+}
+从死循环信息来看：
+1.发生死循环的是主线程。
+2.主线程相对于整个 APP 进程，CPU 占用量很高。
+3.从堆栈看是因为 Lottie 动画导致的。
+4.经过本地验证发现确实存在切换到后台 Lottie 依然在执行动画的问题。
+5.原因是因为钉钉使用的 Lottie 版本太低导致，升级 Lottie 版本之后该问题得到解决。
+```
 ### 案例 3：属性动画泄露导致高 CPU 消耗
 
 ### 案例 4：定时任务执行异常导致死循环
