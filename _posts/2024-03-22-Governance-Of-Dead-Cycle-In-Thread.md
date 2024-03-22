@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Thread | 端线程死循环的治理
+title: Thread | 线程死循环的治理
 categories: [Thread]
-description: 端线程死循环的治理
+description: 线程死循环的治理
 keywords: Thread、Java
 mermaid: false
 sequence: false
