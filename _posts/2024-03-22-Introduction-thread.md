@@ -266,11 +266,72 @@ ANRCanary 在感知到消息队列疑似被打满以后，需要收集更多信�
 大致方案为：  
 ```
 ![img](/images/posts/thread/25rqeahlh.jpg)<br>
-
-
-
-
-
+```.text
+获取当前进程全部的线程对象，逐个遍历。
+如果线程为 HandlerThread 类及其子类，则包含有消息队列，可以尝试获取其消息队列长度。
+如果消息队列长度超过一定阈值，则可以判定为消息队列被打满。
+对消息队列中的消息进行遍历聚合，分析出 Top 级消息内容。
+允许存在多个线程的消息队列被打满的情况。
+```
+能力增强后的 ANRCanary 抓到的上报信息如下：<br>
+```.json
+"case:-2147483648":{
+  "attachInfo":{
+    "messageQueueList":[
+      {
+        "repeatRate":1,
+        "repeatSignature":"android.os.Handler|jlh",
+        "threadName":"TaskHandlerThread",
+        "totalCount":****
+      }
+    ]
+  },
+  "name":"Timer-0",
+  "threadCPURate":0.*,
+  "runTime":***,
+  "threadStackList":[
+    "android.os.MessageQueue.enqueueMessage(MessageQueue.java:577)",
+    "android.os.Handler.enqueueMessage(Handler.java:662)",
+    "android.os.Handler.sendMessageAtTime(Handler.java:631)",
+    "android.os.Handler.sendMessageDelayed(Handler.java:601)",
+    "android.os.Handler.postDelayed(Handler.java:429)",
+    "de.executor(SourceFile:31)",
+    "tm.query(SourceFile:268)",
+    "mk.start(SourceFile:166)",
+    "mk$1.run(SourceFile:93)",
+    "java.util.TimerThread.mainLoop(Timer.java:555)",
+    "java.util.TimerThread.run(Timer.java:505)"
+  ]
+}
+从附加信息来看：
+repeatRate：消息队列重复率为 100%，说明均为同一类消息。
+repeatSignature：重复消息的 Runnable 类型混淆后为：jlh，确实为监控模块的周期性任务。
+threadName：消息队列所属的线程名为：TaskHandlerThread
+totalCount：消息队列长度远远超出正常消息队列的长度，确实被打满。
+runTime：进程存活时长并不大。正常消息队列应该只有几条消息，而不应该被打满。
+看来 Timer 的间隔能力确实失效了，死循环问题是真实存在的。
+最终定位:对于 Timer 的运行机制进行深入分析以后发现问题：
+```
+```.java
+private void mainLoop() {
+  while (true) {
+    TimerTask task;
+    boolean taskFired;
+    long currentTime, executionTime;
+    // 1.从运行队列中获取头部的周期性任务
+    task = queue.getMin();
+    // 2.获取系统时间（关键点！！！）
+    currentTime = System.currentTimeMillis();
+    // 3.获取周期性任务期望执行时间
+    executionTime = task.nextExecutionTime;
+    taskFired = executionTime <= currentTime;
+    // 4.用两个时间的比较结果，决定是否执行周期性任务
+    if (taskFired) {
+      task.run();
+    }
+  }
+}
+```
 
 
 
