@@ -88,7 +88,43 @@ CPU 占用方案：基于 stat 文件可以知道一个线程占了比较高的 
 
 ## 实际案例分享
 ### 案例 1：多线程操作 HashMap 线程死循环
-
+本案例涉及 Java 中一个经典的死循环问题，即在多线程环境中操作 HashMap 有可能触发无限循环的情况。
+ANRCanary 抓到的上报信息如下：<br>
+```.json
+{
+  "case:1420548922":{
+    "name":"DThread-2",
+    "threadCPURate":0.*,
+    "threadStackList":[
+      "java.util.HashMap.put(HashMap.java:425)",
+      "fde.f(SourceFile:299)",
+      "iwx$1.doAfter(SourceFile:57)",
+      "prw.parseData(SourceFile:23)",
+      "prv.a(SourceFile:18)",
+      "pru$1.run(SourceFile:56)",
+      "com.***.threadpool.TaskRunner.call(SourceFile:750)",
+      "java.lang.Thread.run(Thread.java:762)"
+    ]
+  },
+  "case:1961205280":{
+    "name":"DThread-19",
+    "threadCPURate":0.*,
+    "threadStackList":[
+      "java.util.HashMap.put(HashMap.java:425)",
+      "fde.f(SourceFile:299)",
+      "iwx$1.doAfter(SourceFile:57)",
+      "prw.parseData(SourceFile:23)",
+      "psc.a(SourceFile:342)",
+      "com.***.im.cl.a(SourceFile:100)",
+      "prz.query(SourceFile:2628)",
+      "psh$12.onExecuteRpc(SourceFile:244)",
+      "pri$1.run(SourceFile:143)",
+      "com.***.threadpool.TaskRunner.call(SourceFile:750)",
+      "java.lang.Thread.run(Thread.java:762)"
+    ]
+  }
+}
+```
 ### 案例 2：Lottie 动画后台未停止导致高 CPU 消耗
 
 ### 案例 3：属性动画泄露导致高 CPU 消耗
