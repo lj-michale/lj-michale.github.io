@@ -292,12 +292,62 @@ FROM (
                )
       GROUP BY userId
          );
+将这个最大的层级转化为相应大小的数组，从中得到数组下标集合，然后将这个下标的集合按其中元素展开为多行。这样就得到每个用户在每个层级上明细数据。
+例如userId=1的最大层级为4，通过arryWithConstant函数生成数组[1,1,1,1]，然后取这个数组下标得到新的数组[1,2,3,4]，这些下标其实对应着漏斗的“启动”，“首页”，“详情”，“下载”这四个层级。
+将下标数组通过arrayJoin函数展开，得到userId=1的各层明细数据：              
 ```
-
-
+![img](/images/posts/analysis/微信截图_20240326142153.png)<br>
+```.text
+全部userId的执行结果如下：
+```
+![img](/images/posts/analysis/微信截图_20240326142242.png)<br>
+> 3） 计算漏斗各层的用户数
+```.text
+将上面步骤得到的明细数据按照漏斗层级分组聚合，就得到了每个层级的用户数。
+总体逻辑如下：
+SELECT  transform(level_index,[1,2,3,4],['启动','首页','详情','下载'],'其他') as event,
+        count(1)
+FROM (
+      SELECT userId,
+             arrayWithConstant(level, 1)       levels,
+             arrayJoin(arrayEnumerate(levels)) level_index
+      FROM (
+            SELECT userId,
+                   windowFunnel(86400)(
+                                day,
+                                event = '启动',
+                                event = '首页',
+                                event = '详情',
+                                event = '下载'
+                       ) AS level
+            FROM (
+                  SELECT day, event, userId
+                  FROM funnel_test
+                  WHERE toDate(day) >= '2021-05-01'
+                    and toDate(day) <= '2021-05-06'
+                     )
+            GROUP BY userId
+               )
+         )
+group by level_index
+ORDER BY level_index;
+结果为：
+```
+![img](/images/posts/analysis/微信截图_20240326142410.png)<br>
 
 - [无序漏斗计算]()
-
+```.text
+假定，漏斗的步骤为：启动->首页
+```
+> 1）确定计算的数据范围
+```.text
+SELECT toDate(day),
+       event,
+       userId
+FROM funnel_test
+WHERE toDate(day) >= '2021-05-01'
+and toDate(day) <= '2021-05-06';
+```
 
 
 
