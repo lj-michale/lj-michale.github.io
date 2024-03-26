@@ -238,6 +238,41 @@ insert into funnel_test values(4,'下载','2021-05-03 11:05:00');
 如果数据表如下：
 ```
 ![img](/images/posts/analysis/微信截图_20240326113840.png)<br>
+- [有序漏斗计算]()
+```.text
+假定，漏斗的步骤为：启动->首页->详情->下载
+```
+> 1）使用ClickHouse的漏斗构建函数windowFunnel()查询
+```.sql
+SELECT userId,
+      windowFunnel(86400)(
+                   day,
+                   event = '启动',
+                   event = '首页',
+                   event = '详情',
+                   event = '下载'
+          ) AS level
+FROM (
+     SELECT day, event, userId
+     FROM funnel_test
+     WHERE toDate(day) >= '2021-05-01'
+       and toDate(day) <= '2021-05-06'
+        )
+GROUP BY userId
+order by userId;
+从上述SQL中，设置了漏斗周期为86400秒（1天），这个周期的单位是依据timestamp决定的。整个漏斗分为了4步骤：启动、首页、详情、下载。时间区间为“2021-05-01”到“2021-05-06”之间。
+执行后，得到如下结果：
+```
+![img](/images/posts/analysis/微信截图_20240326114124.png)<br>
+```.text
+从结果中，可以看到各个userId在规定周期内，触达的最大的漏斗层级，也就是执行了漏斗步骤了几步。例如，userId=1，在一天内，按序访问了启动->首页->详情->下载这四步，得到最大层级就是4。
+当然，我们也可以漏斗函数配置为”strict_order“模式，他将严格保证先后次序，还是userId为1的情况，在”2021-05-01“这一天，”详情“与”下载“间多了个”浏览“的动作，所以此刻，userId=1可触达的层级就是3，
+因为，在”strict_order“下，”详情“阻断了整个事件链路。
+```
+
+
+
+- [无序漏斗计算]()
 
 
 
