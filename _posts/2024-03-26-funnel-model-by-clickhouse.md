@@ -154,40 +154,91 @@ mindmap2: false
 
 > 下面，就对漏斗模型在ClickHouse上的应用做一些探索。
 
-### 基于ClickHouse的漏斗分析模型
-- [主要函数介绍]()
-  ```.text
-   1）windowFunnel(window, [mode, [mode, ... ]])(timestamp, cond1, cond2, ..., condN)
-   定义：在所定义的滑动窗口内，依次检索事件链条。函数在这个事件连上触及的事件的最大数量。
-   补充：
-   ① 该函数检索到事件在窗口内的第一个事件，则将事件计数器设置为1，此时就是滑动窗口的启动时刻。
-   ② 如果来自链的事件在窗口内顺序发生，则计数器递增，如果事件序列终端，则计数器不会增加。
-   ③ 如果数据在不同的完成点具有多个事件链，则该函数将仅输出最长链的大小。
-   参数：
-   ①【timestamp】 ：表中代表时间的列。函数会按照这个时间排序
-   ② 【cond】：事件链的约束条件
-   ③【window】：滑动窗口的长度，表示首尾两个事件条件的间隙。单位依据timestamp的参数而定。
-     即：timestamp of cond1 <= timestamp of cond2 <= ... <= timestamp of condN <= timestamp of cond1 + window
-   ④ 【mode】：可选的一些配置：
-   【strict】: 事件链中，如果有事件是不唯一的，则重复的事件的将被排除，同时函数停止计算。
-   【strict_orde】：事件链中的事件，要严格保证先后次序。
-   【strict_increase】：事件链的中事件，其事件戳要保持完全递增。
-    2）arrayWithConstant(length,param)
-    定义：生成一个指定长度的数组
-    参数：
-    ① length：数组长度
-    ② param：填充字段
-    例：SQL：select arrayWithConstant(3,1);
-    Result：arrayWithConstant(3, 1)  [1,1,1]
-    3）arrayEnumerate(arr)
-    定义：返回数组下标
-    参数：arr：数组
-    例：SQL：select arrayEnumerate([11,22,33]);
-    Result：arrayEnumerate([11, 22, 33]) [1,2,3]    
-    4）groupArray(x)
-    定义：创建数组
-    例：SQL：select groupArray(1);
-  ```
+## 基于ClickHouse的漏斗分析模型
+### 主要函数介绍
+```.text
+1）windowFunnel(window, [mode, [mode, ... ]])(timestamp, cond1, cond2, ..., condN)
+定义：在所定义的滑动窗口内，依次检索事件链条。函数在这个事件连上触及的事件的最大数量。
+补充：
+① 该函数检索到事件在窗口内的第一个事件，则将事件计数器设置为1，此时就是滑动窗口的启动时刻。
+② 如果来自链的事件在窗口内顺序发生，则计数器递增，如果事件序列终端，则计数器不会增加。
+③ 如果数据在不同的完成点具有多个事件链，则该函数将仅输出最长链的大小。
+参数：
+①【timestamp】 ：表中代表时间的列。函数会按照这个时间排序
+② 【cond】：事件链的约束条件
+③【window】：滑动窗口的长度，表示首尾两个事件条件的间隙。单位依据timestamp的参数而定。
+ 即：timestamp of cond1 <= timestamp of cond2 <= ... <= timestamp of condN <= timestamp of cond1 + window
+④ 【mode】：可选的一些配置：
+【strict】: 事件链中，如果有事件是不唯一的，则重复的事件的将被排除，同时函数停止计算。
+【strict_orde】：事件链中的事件，要严格保证先后次序。
+【strict_increase】：事件链的中事件，其事件戳要保持完全递增。
+2）arrayWithConstant(length,param)
+定义：生成一个指定长度的数组
+参数：
+① length：数组长度
+② param：填充字段
+例：SQL：select arrayWithConstant(3,1);
+Result：arrayWithConstant(3, 1)  [1,1,1]
+3）arrayEnumerate(arr)
+定义：返回数组下标
+参数：arr：数组
+例：SQL：select arrayEnumerate([11,22,33]);
+Result：arrayEnumerate([11, 22, 33]) [1,2,3]    
+4）groupArray(x)
+定义：创建数组
+例：SQL：select groupArray(1);
+Result：groupArray(1) [1] 
+5）arrayCount([func,] arr1)
+定义：返回数组中符合函数func的元素的数量
+参数：
+① func：lambda表达式
+② arr1：数组   
+例：SQL：select arrayCount(x-> x!=1,[11,22,33]);
+Result：arrayCount(lambda(tuple(x), notEquals(x, 1)), [11, 22, 33])  3    
+6）hasAll(set, subset)
+定义：检查一个数组是否是另一个数组的子集，如果是就返回1
+参数：
+① set：具有一组元素的任何类型的数组。
+② subset：任何类型的数组，其元素应该被测试为set的子集。
+例：SQL：
+select hasAll([11,22,33], [11]);
+Result：hasAll([11, 22, 33], [11]) 1    
+```
+### 模型构建过程
+```.text
+为了更加清晰的讲解整个过程，我们举一个例子演示一下整个过程。
+首先构建一个ClickHouse表funnel_test，包含用户唯一标识userId，事件名称event，事件发生日期day。
+建表语句如下：
+create table funnel_test(
+     userId  String,
+     event String,
+     day   DateTime
+)engine = MergeTree PARTITION BY userId
+ORDER BY xxHash32(userId);
+插入测试数据：
+insert into funnel_test values(1,'启动','2021-05-01 11:00:00');
+insert into funnel_test values(1,'首页','2021-05-01 11:10:00');
+insert into funnel_test values(1,'详情','2021-05-01 11:20:00');
+insert into funnel_test values(1,'浏览','2021-05-01 11:30:00');
+insert into funnel_test values(1,'下载','2021-05-01 11:40:00');
+insert into funnel_test values(2,'启动','2021-05-02 11:00:00');
+insert into funnel_test values(2,'首页','2021-05-02 11:10:00');
+insert into funnel_test values(2,'浏览','2021-05-02 11:20:00');
+insert into funnel_test values(2,'下载','2021-05-02 11:30:00');
+insert into funnel_test values(3,'启动','2021-05-01 11:00:00');
+insert into funnel_test values(3,'首页','2021-05-02 11:00:00');
+insert into funnel_test values(3,'详情','2021-05-03 11:00:00');
+insert into funnel_test values(3,'下载','2021-05-04 11:00:00');
+insert into funnel_test values(4,'启动','2021-05-03 11:00:00');
+insert into funnel_test values(4,'首页','2021-05-03 11:01:00');
+insert into funnel_test values(4,'首页','2021-05-03 11:02:00');
+insert into funnel_test values(4,'详情','2021-05-03 11:03:00');
+insert into funnel_test values(4,'详情','2021-05-03 11:04:00');
+insert into funnel_test values(4,'下载','2021-05-03 11:05:00'); 
+如果数据表如下：
+```
+![img](/images/posts/analysis/微信截图_20240326113840.png)<br>
+
 
 
 
