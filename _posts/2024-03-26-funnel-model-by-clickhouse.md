@@ -269,6 +269,30 @@ order by userId;
 当然，我们也可以漏斗函数配置为”strict_order“模式，他将严格保证先后次序，还是userId为1的情况，在”2021-05-01“这一天，”详情“与”下载“间多了个”浏览“的动作，所以此刻，userId=1可触达的层级就是3，
 因为，在”strict_order“下，”详情“阻断了整个事件链路。
 ```
+> 2）获取每个用户在每个层级的明细数据
+```.text
+通过上一步我们计算出了每个用户在设定的周期内触达的最大的层级。下面接着要计算每个用户在每个层级的明细数据，计算逻辑如下：
+SELECT userId,
+       arrayWithConstant(level, 1)       levels,
+       arrayJoin(arrayEnumerate(levels)) level_index
+FROM (
+      SELECT userId,
+             windowFunnel(86400)(
+                          day,
+                          event = '启动',
+                          event = '首页',
+                          event = '详情',
+                          event = '下载'
+                 ) AS level
+      FROM (
+            SELECT day, event, userId
+            FROM funnel_test
+            WHERE toDate(day) >= '2021-05-01'
+              and toDate(day) <= '2021-05-06'
+               )
+      GROUP BY userId
+         );
+```
 
 
 
