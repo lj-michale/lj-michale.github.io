@@ -242,7 +242,7 @@ insert into funnel_test values(4,'下载','2021-05-03 11:05:00');
 ```.text
 假定，漏斗的步骤为：启动->首页->详情->下载
 ```
-> 1）使用ClickHouse的漏斗构建函数windowFunnel()查询
+- 1）使用ClickHouse的漏斗构建函数windowFunnel()查询
 ```.sql
 SELECT userId,
       windowFunnel(86400)(
@@ -269,7 +269,7 @@ order by userId;
 当然，我们也可以漏斗函数配置为”strict_order“模式，他将严格保证先后次序，还是userId为1的情况，在”2021-05-01“这一天，”详情“与”下载“间多了个”浏览“的动作，所以此刻，userId=1可触达的层级就是3，
 因为，在”strict_order“下，”详情“阻断了整个事件链路。
 ```
-> 2）获取每个用户在每个层级的明细数据
+- 2）获取每个用户在每个层级的明细数据
 ```.text
 通过上一步我们计算出了每个用户在设定的周期内触达的最大的层级。下面接着要计算每个用户在每个层级的明细数据，计算逻辑如下：
 SELECT userId,
@@ -301,7 +301,7 @@ FROM (
 全部userId的执行结果如下：
 ```
 ![img](/images/posts/analysis/微信截图_20240326142242.png)<br>
-> 3） 计算漏斗各层的用户数
+- 3） 计算漏斗各层的用户数
 ```.text
 将上面步骤得到的明细数据按照漏斗层级分组聚合，就得到了每个层级的用户数。
 总体逻辑如下：
@@ -339,7 +339,7 @@ ORDER BY level_index;
 ```.text
 假定，漏斗的步骤为：启动->首页
 ```
-> 1）确定计算的数据范围
+- 1）确定计算的数据范围
 ```.text
 SELECT toDate(day),
        event,
