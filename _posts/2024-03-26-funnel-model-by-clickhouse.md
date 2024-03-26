@@ -154,7 +154,46 @@ mindmap2: false
 
 > 下面，就对漏斗模型在ClickHouse上的应用做一些探索。
 
-### 基于 ClickHouse 的漏斗分析模型
+### 基于ClickHouse的漏斗分析模型
+- [主要函数介绍]()
+  ```.text
+   1）windowFunnel(window, [mode, [mode, ... ]])(timestamp, cond1, cond2, ..., condN)
+   定义：在所定义的滑动窗口内，依次检索事件链条。函数在这个事件连上触及的事件的最大数量。
+   补充：
+   ① 该函数检索到事件在窗口内的第一个事件，则将事件计数器设置为1，此时就是滑动窗口的启动时刻。
+   ② 如果来自链的事件在窗口内顺序发生，则计数器递增，如果事件序列终端，则计数器不会增加。
+   ③ 如果数据在不同的完成点具有多个事件链，则该函数将仅输出最长链的大小。
+   参数：
+   ①【timestamp】 ：表中代表时间的列。函数会按照这个时间排序
+   ② 【cond】：事件链的约束条件
+   ③【window】：滑动窗口的长度，表示首尾两个事件条件的间隙。单位依据timestamp的参数而定。
+     即：timestamp of cond1 <= timestamp of cond2 <= ... <= timestamp of condN <= timestamp of cond1 + window
+   ④ 【mode】：可选的一些配置：
+   【strict】: 事件链中，如果有事件是不唯一的，则重复的事件的将被排除，同时函数停止计算。
+   【strict_orde】：事件链中的事件，要严格保证先后次序。
+   【strict_increase】：事件链的中事件，其事件戳要保持完全递增。
+    2）arrayWithConstant(length,param)
+    定义：生成一个指定长度的数组
+    参数：
+    ① length：数组长度
+    ② param：填充字段
+    例：SQL：select arrayWithConstant(3,1);
+    Result：arrayWithConstant(3, 1)  [1,1,1]
+    3）arrayEnumerate(arr)
+    定义：返回数组下标
+    参数：arr：数组
+    例：SQL：select arrayEnumerate([11,22,33]);
+    Result：arrayEnumerate([11, 22, 33]) [1,2,3]    
+    4）groupArray(x)
+    定义：创建数组
+    例：SQL：select groupArray(1);
+  ```
+
+
+
+
+
+
 
 
 ## 参考资料
