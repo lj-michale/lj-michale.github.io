@@ -347,11 +347,66 @@ SELECT toDate(day),
 FROM funnel_test
 WHERE toDate(day) >= '2021-05-01'
 and toDate(day) <= '2021-05-06';
+结果如下：
 ```
-
-
-
-
+![img](/images/posts/analysis/微信截图_20240326164304.png)<br>
+- 2）计算每个userId的访问量(pv)和访问用户数(uv)
+```.text
+先按照时间与userId分组，通过groupArray函数获取事件（event）的集合。
+pv计算：
+【漏斗第一层级】：直接查询事件集合中，漏斗第一步事件的总数。
+【漏斗第二层级】：在第一层级事件存在的情况下，查询第二层级的数量。后面的层级以此类推。
+uv计算：
+【漏斗第一层级】：如果事件集合中，包含第一步事件，则记为1，表示存在。
+【漏斗第二层级】：事件集合中，同时包含第一与第二层级事件，则记为1。后面的层级依此类推。
+select day,
+       userId,
+       groupArray(event) as events,
+       arrayCount(x-> x = '启动', events)  as level1_pv,
+       if(has(events, '启动'), arrayCount(x-> x = '首页', events), 0)  as level2_pv,
+       hasAll(events, ['启动'])  as level1_uv,
+       hasAll(events, ['启动','首页'])  as level2_uv
+from (
+      SELECT toDate(day) as day,
+             event,
+             userId
+      FROM funnel_test
+      WHERE toDate(day) >= '2021-05-01'
+        and toDate(day) <= '2021-05-06')
+group by day, userId;
+得到结果：
+```
+![img](/images/posts/analysis/微信截图_20240326164450.png)<br>
+- 3）按天统计
+```.text
+按天统计，计算出每天的用户数及每个层级的pv，uv。
+SELECT day  AS day,     
+       sum(level1_pv) AS sum_level1_pv,
+       sum(level2_pv) AS sum_level2_pv,
+       sum(level1_uv) as sum_level1_uv,
+       sum(level2_uv) as sum_level2_uv
+from (
+      select day,
+             userId,
+             groupArray(event) as events,
+             arrayCount(x-> x = '启动', events) as level1_pv,
+             if(has(events, '启动'), arrayCount(x-> x = '首页', events), 0) as level2_pv,
+             hasAll(events, ['启动']) as level1_uv,
+             hasAll(events, ['启动','首页']) as level2_uv
+      from (
+            SELECT toDate(day) as day,
+                   event,
+                   userId
+            FROM funnel_test
+            WHERE toDate(day) >= '2021-05-01'
+              and toDate(day) <= '2021-05-06')
+      group by day, userId
+         )
+group by day
+order by day;
+计算结果如下：
+```
+![img](/images/posts/analysis/微信截图_20240326164606.png)<br>
 
 
 
