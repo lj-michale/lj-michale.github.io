@@ -412,7 +412,7 @@ order by day;
 
 
 ## 参考资料
-
+- [漏斗分析模型](https://blog.csdn.net/summer_fish/article/details/133408921)
 
 
 
