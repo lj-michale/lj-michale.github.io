@@ -75,4 +75,4 @@ CentOS8
 - [如何使用 GitLab + Zadig 实现产品级持续交付](https://koderover.com/tutorials-detail/codelabs/GitLab/index.html?index=..%2F..index#0)
 - [K8S部署Harbor（三部曲之三：使用）](https://blog.csdn.net/mo_sss/article/details/135961189)
 - [K8S自动化部署Java项目的实现流程（Gitlab推送镜像到Harbor，K8S拉取Harbor中的镜像进行部署）](https://blog.csdn.net/mo_sss/article/details/137178236?spm=1001.2014.3001.5502)
-
+- [zadig安装部署接入k8s集群、ldap、jenkins、gitlab、项目配置管理、yaml模板管理](https://blog.csdn.net/weixin_43606975/article/details/127442891)
