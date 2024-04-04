@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Data Platform | 基于开源构建的一站式数据与算法平台部署
+title:  Data Platform | 基于开源构建的一站式数据与算法平台(部署)
 categories: [data platform]
 description: 基于开源构建的一站式数据与算法平台部署
 keywords: platform
@@ -33,6 +33,17 @@ CentOS8
 | Kubernetes |                  Kubernetes 也称为 K8s，是用于自动部署、扩缩和管理容器化应用程序的开源系统                   |  v1.26  |      |     |
 | KubeSphere | KubeSphere 是在 Kubernetes 之上构建的以应用为中心的多租户容器平台,提供全栈的 IT 自动化运维的能力,简化企业的 DevOps 工作流 | v3.4.0  |      |     |
 |   Docker   |                                      容器引擎                                       | 20.10.7 |      |     |
+
+
+
+
+## Q&A
+### 使用yum命令时报错：CentOS Linux 8 - AppStream 错误：为仓库 ‘appstream’ 下载元数据失败 : Cannot prepare internal mirrorlist: No URLs in mirrorlist
+![img](/images/posts/k8s/微信图片_20240404105041.png)<br>
+```.text
+
+```
+
 
 
 
