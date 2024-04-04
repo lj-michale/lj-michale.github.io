@@ -38,6 +38,14 @@ CentOS8
 
 
 
+
+
+
+
+
+
+
+
 ## Q&A
 ### 使用yum命令时报错：CentOS Linux 8 - AppStream 错误：为仓库 ‘appstream’ 下载元数据失败 : Cannot prepare internal mirrorlist: No URLs in mirrorlist
 ![img](/images/posts/k8s/微信图片_20240404105041.png)<br>
