@@ -21,7 +21,8 @@ mindmap2: false
 ```
 
 ## 准备工作
-### 部署Kubernetes(k8s)多主的高可用集群
+### KubeSphere部署Kubernetes(k8s)多主的高可用集群
+![img](/images/posts/k8s/微信截图_20240404095700.png)<br>
 #### 服务器
 ```.text
 CentOS8
