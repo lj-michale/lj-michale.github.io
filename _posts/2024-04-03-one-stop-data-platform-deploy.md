@@ -34,8 +34,8 @@ CentOS8
 | Kubernetes |                  Kubernetes 也称为 K8s，是用于自动部署、扩缩和管理容器化应用程序的开源系统                   |  v1.26  |      |     |
 | KubeSphere | KubeSphere 是在 Kubernetes 之上构建的以应用为中心的多租户容器平台,提供全栈的 IT 自动化运维的能力,简化企业的 DevOps 工作流 | v3.4.0  |      |     |
 |   Docker   |                                      容器引擎                                       | 20.10.7 |      |     |
-|   Keepalived   |             keepalived是集群管理中保证集群高可用的一个服务软件，其功能类似于heartbeat，用来防止单点故障             |         |      |     |
-|   HAProxy   | 开源的、高性能的、基于TCP(第四层)和HTTP(第七层)应用的负载均衡软件,借助HAProxy可以快速、可靠地提供基于TCP和HTTP应用的负载均衡解决方案 |  |      |     |
+| Keepalived |             keepalived是集群管理中保证集群高可用的一个服务软件，其功能类似于heartbeat，用来防止单点故障             |         |      |     |
+|  HAProxy   | 开源的、高性能的、基于TCP(第四层)和HTTP(第七层)应用的负载均衡软件,借助HAProxy可以快速、可靠地提供基于TCP和HTTP应用的负载均衡解决方案 |  |      |     |
 
 
 
