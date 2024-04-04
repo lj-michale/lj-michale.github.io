@@ -42,18 +42,18 @@ CentOS8
 ### k8s集成Zadig实现CI/CD DevOps
 #### 组件及其版本
 
-|   组件    |                     类别                      |   版本    | 下载地址 | 备注  |
-|:-------:|:-------------------------------------------:|:-------:|:----:|:---:|
-|  Zadig  |   云原生 DevOps 平台,覆盖从需求到开发、测试、运维的一体化工程技术底座    |  v2.2.0  |      |     |
-|  harbor |       |  v2.2.0  |      |     |
-
-
+|   组件   |                     类别                      |   版本    | 下载地址 | 备注  |
+|:------:|:-------------------------------------------:|:-------:|:----:|:---:|
+| Zadig  |   云原生 DevOps 平台,覆盖从需求到开发、测试、运维的一体化工程技术底座    |  v2.2.0  |      |     |
+| Harbor |       |  v2.2.0  |      |     |
+| GitLab |       |  v2.2.0  |      |     |
+| GitHub |       |  v2.2.0  |      |     |
 
 
 
 
 ## Q&A
-- [Q:使用yum命令时报错：CentOS Linux 8 - AppStream 错误：为仓库 ‘appstream’ 下载元数据失败 : Cannot prepare internal mirrorlist: No URLs in mirrorlist]()<br>
+- [Q: 使用yum命令时报错：CentOS Linux 8 - AppStream 错误：为仓库 ‘appstream’ 下载元数据失败 : Cannot prepare internal mirrorlist: No URLs in mirrorlist]()<br>
 ![img](/images/posts/k8s/微信图片_20240404105041.png)<br>
 
 
