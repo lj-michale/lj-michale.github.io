@@ -42,11 +42,10 @@ CentOS8
 ### k8s集成Zadig实现CI/CD DevOps
 #### 组件及其版本
 
-|     组件     |                     类别                      |   版本    | 下载地址 | 备注  |
-|:----------:|:-------------------------------------------:|:-------:|:----:|:---:|
-|   Zadig    |   云原生 DevOps 平台,覆盖从需求到开发、测试、运维的一体化工程技术底座    |  v2.2.0  |      |     |
-
-
+|   组件    |                     类别                      |   版本    | 下载地址 | 备注  |
+|:-------:|:-------------------------------------------:|:-------:|:----:|:---:|
+|  Zadig  |   云原生 DevOps 平台,覆盖从需求到开发、测试、运维的一体化工程技术底座    |  v2.2.0  |      |     |
+|  harbor |       |  v2.2.0  |      |     |
 
 
 
@@ -54,7 +53,7 @@ CentOS8
 
 
 ## Q&A
-- [Q:使用yum命令时报错：CentOS Linux 8 - AppStream 错误：为仓库 ‘appstream’ 下载元数据失败 : Cannot prepare internal mirrorlist: No URLs in mirrorlist]()
+- [Q:使用yum命令时报错：CentOS Linux 8 - AppStream 错误：为仓库 ‘appstream’ 下载元数据失败 : Cannot prepare internal mirrorlist: No URLs in mirrorlist]()<br>
 ![img](/images/posts/k8s/微信图片_20240404105041.png)<br>
 
 
@@ -74,6 +73,6 @@ CentOS8
 - [kubesphere搭建k8s集群](https://blog.csdn.net/javajy/article/details/131389894)
 - [kubesphere官网](https://kubesphere.io/)
 - [如何使用 GitLab + Zadig 实现产品级持续交付](https://koderover.com/tutorials-detail/codelabs/GitLab/index.html?index=..%2F..index#0)
-
-
+- [K8S部署Harbor（三部曲之三：使用）](https://blog.csdn.net/mo_sss/article/details/135961189)
+- [K8S自动化部署Java项目的实现流程（Gitlab推送镜像到Harbor，K8S拉取Harbor中的镜像进行部署）](https://blog.csdn.net/mo_sss/article/details/137178236?spm=1001.2014.3001.5502)
 
