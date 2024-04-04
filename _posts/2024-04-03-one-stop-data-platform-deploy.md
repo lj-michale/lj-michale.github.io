@@ -34,8 +34,16 @@ CentOS8
 | Kubernetes |                  Kubernetes 也称为 K8s，是用于自动部署、扩缩和管理容器化应用程序的开源系统                   |  v1.26  |      |     |
 | KubeSphere | KubeSphere 是在 Kubernetes 之上构建的以应用为中心的多租户容器平台,提供全栈的 IT 自动化运维的能力,简化企业的 DevOps 工作流 | v3.4.0  |      |     |
 |   Docker   |                                      容器引擎                                       | 20.10.7 |      |     |
+|   Keepalived   |             keepalived是集群管理中保证集群高可用的一个服务软件，其功能类似于heartbeat，用来防止单点故障             |         |      |     |
+|   HAProxy   | 开源的、高性能的、基于TCP(第四层)和HTTP(第七层)应用的负载均衡软件,借助HAProxy可以快速、可靠地提供基于TCP和HTTP应用的负载均衡解决方案 |  |      |     |
 
 
+### Kubernetes(k8s)集成Zadig实现CI/CD DevOps
+#### 组件及其版本
+
+|     组件     |                     类别                      |   版本    | 下载地址 | 备注  |
+|:----------:|:-------------------------------------------:|:-------:|:----:|:---:|
+|   Zadig    |   云原生 DevOps 平台,覆盖从需求到开发、测试、运维的一体化工程技术底座    |  v1.26  |      |     |
 
 
 
@@ -58,8 +66,15 @@ CentOS8
 
 
 ## 参考资料
-
-
+- [Zadig为什么能用的爽](https://www.51cto.com/article/721329.html)
+- [KubeSphere助力提升研发效能的应用实践分享](https://blog.csdn.net/zpf17671624050/article/details/130262829)
+- [看了就会的Zadig入门教程](https://blog.csdn.net/a519781181/article/details/131198539)
+- [zadig-2.1文档](https://www.bookstack.cn/read/zadig-2.1-zh/%e5%bf%ab%e9%80%9f%e5%85%a5%e9%97%a8.md)
+- [Zadig官网](https://www.koderover.com/)
+- [部署Kubernetes(k8s)多主的高可用集群](https://blog.csdn.net/m0_51510236/article/details/134142834)
+- [kubesphere搭建k8s集群](https://blog.csdn.net/javajy/article/details/131389894)
+- [kubesphere官网](https://kubesphere.io/)
+- [如何使用 GitLab + Zadig 实现产品级持续交付](https://koderover.com/tutorials-detail/codelabs/GitLab/index.html?index=..%2F..index#0)
 
 
 
