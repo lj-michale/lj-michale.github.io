@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Data Analysis | 基于ClickHouse的漏斗模型实践2
+title:  Data Analysis2 | 基于ClickHouse的漏斗模型实践2
 categories: [data analysis、clickhouse]
 description: 基于ClickHouse的漏斗模型实践
 keywords: clickhouse、sql
