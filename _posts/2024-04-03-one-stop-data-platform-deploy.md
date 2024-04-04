@@ -76,3 +76,8 @@ CentOS8
 - [K8S部署Harbor（三部曲之三：使用）](https://blog.csdn.net/mo_sss/article/details/135961189)
 - [K8S自动化部署Java项目的实现流程（Gitlab推送镜像到Harbor，K8S拉取Harbor中的镜像进行部署）](https://blog.csdn.net/mo_sss/article/details/137178236?spm=1001.2014.3001.5502)
 - [zadig安装部署接入k8s集群、ldap、jenkins、gitlab、项目配置管理、yaml模板管理](https://blog.csdn.net/weixin_43606975/article/details/127442891)
+- [K8S部署Harbor镜像仓库（含离线安装包harbor-offline-installer国内下载链接）](https://blog.csdn.net/mo_sss/article/details/135909921?spm=1001.2014.3001.5502)
+- [K8S部署GitLab（详细完整版）](https://blog.csdn.net/mo_sss/article/details/135461021?spm=1001.2014.3001.5502)
+- [K8S搭建（centos）完整版](https://blog.csdn.net/mo_sss/article/details/135930838?spm=1001.2014.3001.5502)
+
+
