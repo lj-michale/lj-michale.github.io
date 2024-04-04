@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Data Platform | 基于开源构建的一站式数据与算法平台(部署)
+title:  Data Platform | 基于开源构建的一站式数据与算法平台部署
 categories: [data platform]
 description: 基于开源构建的一站式数据与算法平台部署
 keywords: platform
