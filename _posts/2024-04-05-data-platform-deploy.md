@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  Data Platform | 基于开源构建的一站式数据与算法平台部署
+title:  Platform | 基于开源构建的一站式数据与算法平台部署
 categories: [data platform、platform]
 description: 基于开源构建的一站式数据与算法平台部署
-keywords: clickhouse、sql
+keywords: platform
 mermaid: false
 sequence: false
 flow: false
