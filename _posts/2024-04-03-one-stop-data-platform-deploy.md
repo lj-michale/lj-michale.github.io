@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Platform | 基于开源构建的一站式数据与算法平台(部署)
+title:  Platform | 基于开源构建的一站式数据算法服务平台(部署)
 categories: [data platform]
 description: 基于开源构建的一站式数据与算法平台部署
 keywords: platform
@@ -13,7 +13,8 @@ mindmap2: false
 ---
 
 ## 前言 <br>
-基于开源构建的一站式数据与算法平台部署
+基于开源构建的一站式数据算法服务平台部署
+
 
 ## 背景需求
 ```.text
@@ -37,9 +38,13 @@ CentOS8
 | HAProxyHAProxy |             keepalived是集群管理中保证集群高可用的一个服务软件，其功能类似于heartbeat，用来防止单点故障             |         |      |     |
 |  HAProxy   | 开源的、高性能的、基于TCP(第四层)和HTTP(第七层)应用的负载均衡软件,借助HAProxy可以快速、可靠地提供基于TCP和HTTP应用的负载均衡解决方案 |  |      |     |
 
+#### 配置Docker镜像加速器
+```.text
+
+```
 
 
-### k8s集成Zadig实现CI/CD DevOps
+### K8S集成Zadig实现CI/CD DevOps
 #### 组件及其版本
 
 |   组件   |                     类别                      |   版本    | 下载地址 | 备注  |
@@ -52,12 +57,40 @@ CentOS8
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Q&A
 - [Q: 使用yum命令时报错：CentOS Linux 8 - AppStream 错误：为仓库 ‘appstream’ 下载元数据失败 : Cannot prepare internal mirrorlist: No URLs in mirrorlist]()<br>
   ![img](/images/posts/k8s/微信图片_20240404105041.png)<br>
 
 - [Q: K8S集群为何要使用负载均衡器VIP(HAProxy、HAProxy)]()<br>
   ![img](/images/posts/k8s/微信截图_20240405155227.png)<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -78,5 +111,6 @@ CentOS8
 - [K8S部署Harbor镜像仓库（含离线安装包harbor-offline-installer国内下载链接）](https://blog.csdn.net/mo_sss/article/details/135909921?spm=1001.2014.3001.5502)
 - [K8S部署GitLab（详细完整版）](https://blog.csdn.net/mo_sss/article/details/135461021?spm=1001.2014.3001.5502)
 - [K8S搭建（centos）完整版](https://blog.csdn.net/mo_sss/article/details/135930838?spm=1001.2014.3001.5502)
-
-
+- [【K8S教程】K8S高可用集群搭建之负载均衡器VIP（HAProxy、keepalived）](https://www.bilibili.com/video/BV13c411p7fu/?spm_id_from=333.337.search-card.all.click&vd_source=b1ac49461ca56388666e71fc70402332)
+- [阿里云官方镜像加速](https://help.aliyun.com/zh/acr/user-guide/accelerate-the-pulls-of-docker-official-images)
+- [docker安装与配置docker镜像加速器](https://blog.csdn.net/wish_you_luck/article/details/130598016)
