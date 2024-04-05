@@ -57,10 +57,7 @@ CentOS8
   ![img](/images/posts/k8s/微信图片_20240404105041.png)<br>
 
 - [Q: K8S集群为何要使用负载均衡器VIP(HAProxy、HAProxy)]()<br>
-  ```.text
- 
-  ```
-
+  ![img](/images/posts/k8s/微信截图_20240405155227.png)<br>
 
 
 
