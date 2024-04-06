@@ -22,12 +22,29 @@ mindmap2: false
 ```
 
 ## 准备工作
-### KubeSphere部署Kubernetes(k8s)多主的高可用集群
+### Kubernetes(k8s)多主的高可用集群部署
 ![img](/images/posts/k8s/微信截图_20240404095700.png)<br>
 #### 服务器
 ```.text
-CentOS8
+系统：CentOS8,内核版本：
 ```
+- [服务器规划]()
+
+|  服务器名称  | IP | 组件 | 角色 | 备注  |
+|:-------:|:--:|:--:|:--:|:---:|
+| master1 |    |  kubectl、kubeadm、kubelet、keepalived、haproxy  |    |     |
+| master2 |    |   kubectl、kubeadm、kubelet、keepalived、haproxy |    |     |
+| master3 |    |    |    |     |
+| slave1  |    |  kubectl、kubeadm、kubelet  |    |     |
+| slave2  |    |    |    |     |
+| slave3  |    |    |    |     |
+| slave4  |    |    |    |     |
+| slave5  |    |    |    |     |
+| slave6  |    |    |    |     |
+| slave7  |    |    |    |     |
+| slave8  |    |    |    |     |
+| slave9  |    |    |    |     |
+
 #### 组件及其版本
 
 |     组件     |                                       类别                                        |   版本    | 下载地址 | 备注  |
@@ -38,27 +55,53 @@ CentOS8
 | HAProxyHAProxy |             keepalived是集群管理中保证集群高可用的一个服务软件，其功能类似于heartbeat，用来防止单点故障             |         |      |     |
 |  HAProxy   | 开源的、高性能的、基于TCP(第四层)和HTTP(第七层)应用的负载均衡软件,借助HAProxy可以快速、可靠地提供基于TCP和HTTP应用的负载均衡解决方案 |  |      |     |
 
-#### 配置Docker镜像加速器
-```.text
+#### 环境准备
+- [关闭防火墙]()
+- [关闭SELinux]()
+- [关闭Swap分区]()
+- [修改主机名称解析]()
+- [设置主机名称]()
+- [转发IPv4并让iptables看到桥接流量]()
+- [升级操作系统内核]()
+  - [导入elrepo gpg key]()
+  - [安装elrepo YUM源仓库]()
+  - [安装kernel-lt版本]()
+  - [设置grub2默认引导为0]()
+  - [重新生成grub2引导文件]()
 
-```
+#### Docker部署
+- [配置Docker镜像加速器]()
+  ```.text
+
+  ```
+
+#### Containerd部署
+
+
+
+
+#### KubeSphere部署
+
+
 
 
 ### K8S集成Zadig实现CI/CD DevOps
 #### 组件及其版本
 
-|   组件   |                     类别                      |   版本    | 下载地址 | 备注  |
-|:------:|:-------------------------------------------:|:-------:|:----:|:---:|
-| Zadig  |   云原生 DevOps 平台,覆盖从需求到开发、测试、运维的一体化工程技术底座    |  v2.2.0  |      |     |
-| Harbor |       |  v2.2.0  |      |     |
-| GitLab |       |  v2.2.0  |      |     |
-| GitHub |       |  v2.2.0  |      |     |
-
-
-
-
-
-
+|   组件   |                     类别                      |   版本   | 下载地址 | 备注  |
+|:------:|:-------------------------------------------:|:------:|:----:|:---:|
+| Zadig  |   云原生 DevOps 平台,覆盖从需求到开发、测试、运维的一体化工程技术底座    | v2.2.0 |      |     |
+| Harbor |       |  |      |     |
+| GitLab |       |  |      |     |
+| GitHub |       |  |      |     |
+| Maven  |       |        |      |     |
+|  Node  |       |        |      |     |
+|  Java  |       |        |      |     |
+| Scala  |       |        |      |     |
+| Python |       |        |      |     |
+|  pnpm  |       |        |      |     |
+|  nvm   |       |        |      |     |
+|  pip   |       |        |      |     |
 
 
 
@@ -82,8 +125,22 @@ CentOS8
 
 
 
+## 名称解释
 
-
+|   名称    |   解释说明    |  备注   | 
+|:-------:|:---------:|:-----:|
+| kubectl | xxxcbxbxa | aaaaa |
+| keepalived |           |       | 
+| haproxy |           |       | 
+| slave1  |           |       | 
+| slave1  |           |       | 
+| slave1  |           |       | 
+| slave1  |           |       | 
+| slave1  |           |       | 
+| slave1  |           |       | 
+| slave1  |           |       | 
+| slave1  |           |       | 
+| slave1  |           |       | 
 
 
 
@@ -111,6 +168,12 @@ CentOS8
 - [K8S部署Harbor镜像仓库（含离线安装包harbor-offline-installer国内下载链接）](https://blog.csdn.net/mo_sss/article/details/135909921?spm=1001.2014.3001.5502)
 - [K8S部署GitLab（详细完整版）](https://blog.csdn.net/mo_sss/article/details/135461021?spm=1001.2014.3001.5502)
 - [K8S搭建（centos）完整版](https://blog.csdn.net/mo_sss/article/details/135930838?spm=1001.2014.3001.5502)
-- [【K8S教程】K8S高可用集群搭建之负载均衡器VIP（HAProxy、keepalived）](https://www.bilibili.com/video/BV13c411p7fu/?spm_id_from=333.337.search-card.all.click&vd_source=b1ac49461ca56388666e71fc70402332)
+- [K8S高可用集群搭建之负载均衡器VIP（HAProxy、keepalived）](https://www.bilibili.com/video/BV13c411p7fu/?spm_id_from=333.337.search-card.all.click&vd_source=b1ac49461ca56388666e71fc70402332)
 - [阿里云官方镜像加速](https://help.aliyun.com/zh/acr/user-guide/accelerate-the-pulls-of-docker-official-images)
 - [docker安装与配置docker镜像加速器](https://blog.csdn.net/wish_you_luck/article/details/130598016)
+- [离线安装K8S集群1.25.3](https://www.bilibili.com/video/BV1fk4y1Y7AH/?p=153&spm_id_from=pageDriver&vd_source=b1ac49461ca56388666e71fc70402332)
+- [40分钟带你使用kubeadm极速部署生产级kubernetes（k8s 1.29）集群（k8s安装/k8s部署/k8s实战）](https://www.bilibili.com/video/BV1LC4y1g7wz?p=3&vd_source=b1ac49461ca56388666e71fc70402332)
+- [基于kubeadm部署k8s 1.27版本高可用集群](https://www.bilibili.com/video/BV1QV4y1r7NR/?spm_id_from=333.337.search-card.all.click&vd_source=b1ac49461ca56388666e71fc70402332)
+- [containerd简介](https://www.cnblogs.com/liwenchao1995/p/16896150.html)
+- [使用Keepalived和HAproxy创建高可用Kubernetes集群](https://www.kubesphere.io/zh/docs/v3.3/installing-on-linux/high-availability-configurations/set-up-ha-cluster-using-keepalived-haproxy/)
+
