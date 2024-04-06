@@ -176,4 +176,5 @@ mindmap2: false
 - [基于kubeadm部署k8s 1.27版本高可用集群](https://www.bilibili.com/video/BV1QV4y1r7NR/?spm_id_from=333.337.search-card.all.click&vd_source=b1ac49461ca56388666e71fc70402332)
 - [containerd简介](https://www.cnblogs.com/liwenchao1995/p/16896150.html)
 - [使用Keepalived和HAproxy创建高可用Kubernetes集群](https://www.kubesphere.io/zh/docs/v3.3/installing-on-linux/high-availability-configurations/set-up-ha-cluster-using-keepalived-haproxy/)
-
+- [HAProxy的配置与搭建](https://blog.csdn.net/ZZZ_CCC01/article/details/132404465)
+- [HAproxy配置详解](https://cloud.tencent.com/developer/article/2034982)
