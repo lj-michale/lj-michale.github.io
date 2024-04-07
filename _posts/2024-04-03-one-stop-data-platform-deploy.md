@@ -182,7 +182,7 @@ mindmap2: false
 - [使用kubeadm方式搭建多master高可用K8s集群](https://blog.csdn.net/wuhuayangs/article/details/125995743)
 - [k8s-kubernetes--高可用集群的搭建](https://blog.csdn.net/Gong_yz/article/details/129658373)
 - [探索Kubernetes的高可用性：单master集群和多master节点集群方案](https://blog.csdn.net/citywu123/article/details/132740625?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-132740625-blog-129901518.235%5Ev43%5Epc_blog_bottom_relevance_base4&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-132740625-blog-129901518.235%5Ev43%5Epc_blog_bottom_relevance_base4&utm_relevant_index=2)
-
+- [k8s pod常用运维命令](https://blog.csdn.net/nanhai_happy/article/details/134433603)
 
 
 
