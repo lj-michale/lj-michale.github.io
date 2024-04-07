@@ -23,7 +23,8 @@ mindmap2: false
 
 ## 准备工作
 ### Kubernetes(k8s)多主的高可用集群部署
-![img](/images/posts/k8s/微信截图_20240404095700.png)<br>
+#### 集群架构
+![img](/images/posts/k8s/微信图片_20240406124928.png)<br>
 #### 服务器
 ```.text
 系统：CentOS8,内核版本：
@@ -127,20 +128,20 @@ mindmap2: false
 
 ## 名称解释
 
-|   名称    |   解释说明    |  备注   | 
-|:-------:|:---------:|:-----:|
-| kubectl | xxxcbxbxa | aaaaa |
-| keepalived |           |       | 
-| haproxy |           |       | 
-| slave1  |           |       | 
-| slave1  |           |       | 
-| slave1  |           |       | 
-| slave1  |           |       | 
-| slave1  |           |       | 
-| slave1  |           |       | 
-| slave1  |           |       | 
-| slave1  |           |       | 
-| slave1  |           |       | 
+|      名称       |                                         解释说明                                          |  备注   | 
+|:-------------:|:-------------------------------------------------------------------------------------:|:-----:|
+|    kubectl    |                                       xxxcbxbxa                                       |  |
+|  keepalived   |                                                                                       |       | 
+|    haproxy    |                                                                                       |       | 
+|      pod      |           pod是k8s的最小工作单元。每个pod包含一个或者多个容器。pod中的容器会作为一个整体被master调度到一个node上运行            |       | 
+|  controller   |  k8s通常不会直接创建pod,而是通过controller来管理pod的。controller中定义了pod的部署特性，比如有几个副本，在什么样的node上运行等。   |       | 
+|    slave1     |                                                                                       |       | 
+|    slave1     |                                                                                       |       | 
+|    slave1     |                                                                                       |       | 
+|    slave1     |                                                                                       |       | 
+|    slave1     |                                                                                       |       | 
+|    slave1     |                                                                                       |       | 
+|    slave1     |                                                                                       |       | 
 
 
 
@@ -178,3 +179,14 @@ mindmap2: false
 - [使用Keepalived和HAproxy创建高可用Kubernetes集群](https://www.kubesphere.io/zh/docs/v3.3/installing-on-linux/high-availability-configurations/set-up-ha-cluster-using-keepalived-haproxy/)
 - [HAProxy的配置与搭建](https://blog.csdn.net/ZZZ_CCC01/article/details/132404465)
 - [HAproxy配置详解](https://cloud.tencent.com/developer/article/2034982)
+- [使用kubeadm方式搭建多master高可用K8s集群](https://blog.csdn.net/wuhuayangs/article/details/125995743)
+- [k8s-kubernetes--高可用集群的搭建](https://blog.csdn.net/Gong_yz/article/details/129658373)
+- [探索Kubernetes的高可用性：单master集群和多master节点集群方案](https://blog.csdn.net/citywu123/article/details/132740625?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-132740625-blog-129901518.235%5Ev43%5Epc_blog_bottom_relevance_base4&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-132740625-blog-129901518.235%5Ev43%5Epc_blog_bottom_relevance_base4&utm_relevant_index=2)
+
+
+
+
+
+
+
+
