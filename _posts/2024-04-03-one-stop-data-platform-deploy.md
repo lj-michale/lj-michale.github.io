@@ -183,7 +183,7 @@ mindmap2: false
 - [k8s-kubernetes--高可用集群的搭建](https://blog.csdn.net/Gong_yz/article/details/129658373)
 - [探索Kubernetes的高可用性：单master集群和多master节点集群方案](https://blog.csdn.net/citywu123/article/details/132740625?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-132740625-blog-129901518.235%5Ev43%5Epc_blog_bottom_relevance_base4&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-132740625-blog-129901518.235%5Ev43%5Epc_blog_bottom_relevance_base4&utm_relevant_index=2)
 - [k8s pod常用运维命令](https://blog.csdn.net/nanhai_happy/article/details/134433603)
-
+- [Zadig面向开发者的云原生DevOps平台](https://www.bilibili.com/video/BV19G411Q7zY/?spm_id_from=333.337.search-card.all.click&vd_source=b1ac49461ca56388666e71fc70402332)
 
 
 
