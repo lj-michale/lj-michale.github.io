@@ -173,7 +173,7 @@ mindmap2: false
 - [阿里云官方镜像加速](https://help.aliyun.com/zh/acr/user-guide/accelerate-the-pulls-of-docker-official-images)
 - [docker安装与配置docker镜像加速器](https://blog.csdn.net/wish_you_luck/article/details/130598016)
 - [离线安装K8S集群1.25.3](https://www.bilibili.com/video/BV1fk4y1Y7AH/?p=153&spm_id_from=pageDriver&vd_source=b1ac49461ca56388666e71fc70402332)
-- [40分钟带你使用kubeadm极速部署生产级kubernetes（k8s 1.29）集群（k8s安装/k8s部署/k8s实战）](https://www.bilibili.com/video/BV1LC4y1g7wz?p=3&vd_source=b1ac49461ca56388666e71fc70402332)
+- [使用kubeadm极速部署生产级kubernetes（k8s 1.29）集群](https://www.bilibili.com/video/BV1LC4y1g7wz?p=3&vd_source=b1ac49461ca56388666e71fc70402332)
 - [基于kubeadm部署k8s 1.27版本高可用集群](https://www.bilibili.com/video/BV1QV4y1r7NR/?spm_id_from=333.337.search-card.all.click&vd_source=b1ac49461ca56388666e71fc70402332)
 - [containerd简介](https://www.cnblogs.com/liwenchao1995/p/16896150.html)
 - [使用Keepalived和HAproxy创建高可用Kubernetes集群](https://www.kubesphere.io/zh/docs/v3.3/installing-on-linux/high-availability-configurations/set-up-ha-cluster-using-keepalived-haproxy/)
@@ -184,8 +184,8 @@ mindmap2: false
 - [探索Kubernetes的高可用性：单master集群和多master节点集群方案](https://blog.csdn.net/citywu123/article/details/132740625?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-132740625-blog-129901518.235%5Ev43%5Epc_blog_bottom_relevance_base4&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-132740625-blog-129901518.235%5Ev43%5Epc_blog_bottom_relevance_base4&utm_relevant_index=2)
 - [k8s pod常用运维命令](https://blog.csdn.net/nanhai_happy/article/details/134433603)
 - [Zadig面向开发者的云原生DevOps平台](https://www.bilibili.com/video/BV19G411Q7zY/?spm_id_from=333.337.search-card.all.click&vd_source=b1ac49461ca56388666e71fc70402332)
-
-
+- [k8s ingress基础](https://blog.csdn.net/weixin_40579389/article/details/134338494)
+- [k8s-ingress-安装](https://blog.csdn.net/little_startoo/article/details/136005115)
 
 
 
