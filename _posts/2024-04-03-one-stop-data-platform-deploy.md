@@ -186,7 +186,7 @@ mindmap2: false
 - [Zadig面向开发者的云原生DevOps平台](https://www.bilibili.com/video/BV19G411Q7zY/?spm_id_from=333.337.search-card.all.click&vd_source=b1ac49461ca56388666e71fc70402332)
 - [k8s ingress基础](https://blog.csdn.net/weixin_40579389/article/details/134338494)
 - [k8s-ingress-安装](https://blog.csdn.net/little_startoo/article/details/136005115)
-
-
+- [云原生Java架构师的第一课K8s+Docker+KubeSphere+DevOps](https://www.bilibili.com/video/BV13Q4y1C7hS?p=70&vd_source=b1ac49461ca56388666e71fc70402332)
+- [Linux软锁cpu,记一次服务器内核软死锁（soft lockup）解决方案](https://blog.csdn.net/weixin_30399511/article/details/116876978)
 
 
