@@ -97,7 +97,7 @@ ACK Pro托管版K8s可以对控制面组件根据负载压力做HPA和VPA，可�
 
 - [数学公式]()
 ***
-$f(x)=sin$ <br>
+$f(x)=sinx$ <br>
 
 
 
