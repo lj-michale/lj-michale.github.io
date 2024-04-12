@@ -140,10 +140,10 @@ k8s配置高可用（HA）Kubernetes etcd集群。<br>
 
 
 ### K8S HA部署
+#### HA集群架构设计
+![img](/images/posts/k8s/微信图片_20240406124928.png)<br>
 
-
-
-
+#### 准备工作
 
 
 
