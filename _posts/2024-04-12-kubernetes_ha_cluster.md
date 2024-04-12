@@ -42,20 +42,33 @@ ACR提供了基于DADI(Data Accelerator for Disaggregated Infrastructure)的按�
 ACK Pro托管版K8s在全网的规模体量上万集群，具有自动弹性和生命周期管理的运维管理架构，有丰富的优化、应急处理等经验，持续将最佳实践和参数优化对托管组件升级。
 </p>
 
-
 ### K8s稳定性体现
-> 服务可用性 <br>
+- 服务可用性 <br>
+<p align="left" style="color:grey; font-family:Arial; font-size: 15px">
 
-> 处理时延 <br>
+</p>
 
-> 请求QPS与流量吞吐 <br>
+- 处理时延 <br>
+<p align="left" style="color:grey; font-family:Arial; font-size: 15px">
 
-> 资源水位 <br>
+</p>
+
+- 请求QPS与流量吞吐 <br>
+<p align="left" style="color:grey; font-family:Arial; font-size: 15px">
+
+</p>
+
+- 资源水位 <br>
+<p align="left" style="color:grey; font-family:Arial; font-size: 15px">
+
+</p>
 
 
+## 高可用集群建设
+### Kubernetes集群架构
+![img](/images/posts/kubernetes/微信截图_20240412111533.png)<br>
 
-
-
+### 高可用架构设计
 
 
 
