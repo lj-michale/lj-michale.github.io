@@ -82,39 +82,39 @@ ACK Pro托管版K8s在全网的规模体量上万集群，具有自动弹性和�
 - [集群架构]()
 ![img](/images/posts/kubernetes/微信截图_20240412153801.png)<br>
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
-kubernetes多master集群是指使用多个master节点来提高集群的可用性和容错性的方案。
-master节点是负责控制和管理集群中的资源和服务的节点，它运行着以下组件：
-1.kube-apiserver：提供了HTTP REST接口的关键服务进程，是集群中所有资源的增、删、改、查等操作的唯一入口，也是集群控制的入口进程。
-2.kube-scheduler：负责资源调度（Pod调度）的进程，相当于公交公司的“调度室”。
-3.kube-controller-manager：集群中所有资源对象的自动化控制中心，可以将其理解为资源对象的“大总管”。
+kubernetes多master集群是指使用多个master节点来提高集群的可用性和容错性的方案。<br>
+master节点是负责控制和管理集群中的资源和服务的节点，它运行着以下组件：<br>
+1.kube-apiserver：提供了HTTP REST接口的关键服务进程，是集群中所有资源的增、删、改、查等操作的唯一入口，也是集群控制的入口进程。<br>
+2.kube-scheduler：负责资源调度（Pod调度）的进程，相当于公交公司的“调度室”。<br>
+3.kube-controller-manager：集群中所有资源对象的自动化控制中心，可以将其理解为资源对象的“大总管”。<br>
 
-实现kubernetes master集群有多种方式，根据不同的需求和场景，可以选择合适的方式来搭建和运维master集群。
-一般来说，根据实现方式，负载均衡集群可以分为以下几种方案：
-1.硬件负载均衡：硬件负载均衡是使用专门的硬件设备来实现负载均衡的方案，如 F5、Cisco 等。硬件负载均衡的优点是性能高、稳定性强，缺点是成本高、扩展性差。
-2.软件负载均衡：软件负载均衡是使用普通的服务器和软件来实现负载均衡的方案，如 Nginx、HAProxy 等。软件负载均衡的优点是成本低、扩展性好，缺点是性能低、稳定性差。
-3.混合负载均衡：混合负载均衡是结合硬件和软件来实现负载均衡的方案，如使用硬件设备作为全局入口，使用软件作为局部分发。混合负载均衡的优点是兼顾了性能和成本，缺点是复杂度高、维护难。
+实现kubernetes master集群有多种方式，根据不同的需求和场景，可以选择合适的方式来搭建和运维master集群。<br>
+一般来说，根据实现方式，负载均衡集群可以分为以下几种方案：<br>
+1.硬件负载均衡：硬件负载均衡是使用专门的硬件设备来实现负载均衡的方案，如 F5、Cisco 等。硬件负载均衡的优点是性能高、稳定性强，缺点是成本高、扩展性差。<br>
+2.软件负载均衡：软件负载均衡是使用普通的服务器和软件来实现负载均衡的方案，如 Nginx、HAProxy 等。软件负载均衡的优点是成本低、扩展性好，缺点是性能低、稳定性差。<br>
+3.混合负载均衡：混合负载均衡是结合硬件和软件来实现负载均衡的方案，如使用硬件设备作为全局入口，使用软件作为局部分发。混合负载均衡的优点是兼顾了性能和成本，缺点是复杂度高、维护难。<br>
 </p>
 
 
 ##### 存储高可用集群
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
-etcd：分布式键值存储系统，用于保存集群中所有资源对象的状态和元数据。
-k8s配置高可用（HA）Kubernetes etcd集群。
-你可以设置 以下两种HA 集群：
-1.使用堆叠（stacked）控制平面节点，其中 etcd 节点与控制平面节点共存
-2.使用外部 etcd 节点，其中 etcd 在与控制平面不同的节点上运行
+etcd：分布式键值存储系统，用于保存集群中所有资源对象的状态和元数据。<br>
+k8s配置高可用（HA）Kubernetes etcd集群。<br>
+你可以设置 以下两种HA 集群：<br>
+1.使用堆叠（stacked）控制平面节点，其中 etcd 节点与控制平面节点共存 <br>
+2.使用外部 etcd 节点，其中 etcd 在与控制平面不同的节点上运行 <br>
 </p>
 
 - 集群架构 <br>
 - [堆叠(Stacked)etcd拓扑--内置etcd集群]() <br>
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
-堆叠（Stacked）HA集群是一种这样的拓扑，其中 etcd 分布式数据存储集群堆叠在 kubeadm 管理的控制平面节点上，作为控制平面的一个组件运行。
-每个控制平面节点运行 kube-apiserver、kube-scheduler 和 kube-controller-manager 实例。 kube-apiserver 使用负载均衡器暴露给工作节点。
-每个控制平面节点创建一个本地etcd成员（member），这个 etcd 成员只与该节点的 kube-apiserver 通信。 这同样适用于本地 kube-controller-manager 和 kube-scheduler 实例。
-这种拓扑将控制平面和 etcd 成员耦合在同一节点上。相对使用外部 etcd 集群， 设置起来更简单，而且更易于副本管理。
-然而，堆叠集群存在耦合失败的风险。如果一个节点发生故障，则etcd 成员和控制平面实例都将丢失， 并且冗余会受到影响。你可以通过添加更多控制平面节点来降低此风险。
-因此，你应该为 HA 集群运行至少三个堆叠的控制平面节点。
-这是 kubeadm 中的默认拓扑。当使用 kubeadm init 和 kubeadm join --control-plane 时， 在控制平面节点上会自动创建本地 etcd 成员。
+堆叠（Stacked）HA集群是一种这样的拓扑，其中 etcd 分布式数据存储集群堆叠在 kubeadm 管理的控制平面节点上，作为控制平面的一个组件运行。<br>
+每个控制平面节点运行 kube-apiserver、kube-scheduler 和 kube-controller-manager 实例。 kube-apiserver 使用负载均衡器暴露给工作节点。<br>
+每个控制平面节点创建一个本地etcd成员（member），这个 etcd 成员只与该节点的 kube-apiserver 通信。 这同样适用于本地 kube-controller-manager 和 kube-scheduler 实例。<br>
+这种拓扑将控制平面和 etcd 成员耦合在同一节点上。相对使用外部 etcd 集群， 设置起来更简单，而且更易于副本管理。<br>
+然而，堆叠集群存在耦合失败的风险。如果一个节点发生故障，则etcd 成员和控制平面实例都将丢失， 并且冗余会受到影响。你可以通过添加更多控制平面节点来降低此风险。<br>
+因此，你应该为 HA 集群运行至少三个堆叠的控制平面节点。<br>
+这是 kubeadm 中的默认拓扑。当使用 kubeadm init 和 kubeadm join --control-plane 时， 在控制平面节点上会自动创建本地 etcd 成员。<br>
 <p>
 ![img](/images/posts/kubernetes/微信截图_20240412154500.png)<br>
 
