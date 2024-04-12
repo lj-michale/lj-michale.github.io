@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  Flink | Flink多线程实现异构集群的动态负载均衡
-categories: [flink]
+categories: [Flink]
 description: Flink多线程实现异构集群的动态负载均衡
-keywords: flink
+keywords: Flink
 mermaid: false
 sequence: false
 flow: false
