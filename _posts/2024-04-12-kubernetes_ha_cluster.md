@@ -129,7 +129,7 @@ k8s配置高可用（HA）Kubernetes etcd集群。<br>
     但此拓扑需要两倍于堆叠 HA 拓扑的主机数量。 具有此拓扑的 HA 集群至少需要三个用于控制平面节点的主机和三个用于 etcd 节点的主机。<br>
    </p>
 
-![img](/images/posts/kubernetes/微信截图_20240412155102.png)<br>
+   ![img](/images/posts/kubernetes/微信截图_20240412155102.png)<br>
 
 
 
