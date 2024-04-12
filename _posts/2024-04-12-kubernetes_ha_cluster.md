@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  Kubernetes | 基于Keepalived和HAproxy构建高可用Kubernetes集群
+title:  Kubernetes | Kubernetes高可用集群建设
 categories: [Kubernetes]
-description: 基于Keepalived和HAproxy构建高可用Kubernetes集群
+description: Kubernetes高可用集群建设
 keywords: Kubernetes
 mermaid: false
 sequence: false
