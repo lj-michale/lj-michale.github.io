@@ -96,10 +96,32 @@ master节点是负责控制和管理集群中的资源和服务的节点，它�
 </p>
 
 
-##### 
+##### 存储高可用集群
+<p align="left" style="color:grey; font-family:Arial; font-size: 15px">
+etcd：分布式键值存储系统，用于保存集群中所有资源对象的状态和元数据。
+k8s配置高可用（HA）Kubernetes etcd集群。
+你可以设置 以下两种HA 集群：
+1.使用堆叠（stacked）控制平面节点，其中 etcd 节点与控制平面节点共存
+2.使用外部 etcd 节点，其中 etcd 在与控制平面不同的节点上运行
+</p>
 
+- 集群架构 <br>
+- [堆叠(Stacked)etcd拓扑--内置etcd集群]() <br>
+<p align="left" style="color:grey; font-family:Arial; font-size: 15px">
+堆叠（Stacked）HA集群是一种这样的拓扑，其中 etcd 分布式数据存储集群堆叠在 kubeadm 管理的控制平面节点上，作为控制平面的一个组件运行。
+每个控制平面节点运行 kube-apiserver、kube-scheduler 和 kube-controller-manager 实例。 kube-apiserver 使用负载均衡器暴露给工作节点。
+每个控制平面节点创建一个本地etcd成员（member），这个 etcd 成员只与该节点的 kube-apiserver 通信。 这同样适用于本地 kube-controller-manager 和 kube-scheduler 实例。
+这种拓扑将控制平面和 etcd 成员耦合在同一节点上。相对使用外部 etcd 集群， 设置起来更简单，而且更易于副本管理。
+然而，堆叠集群存在耦合失败的风险。如果一个节点发生故障，则etcd 成员和控制平面实例都将丢失， 并且冗余会受到影响。你可以通过添加更多控制平面节点来降低此风险。
+因此，你应该为 HA 集群运行至少三个堆叠的控制平面节点。
+这是 kubeadm 中的默认拓扑。当使用 kubeadm init 和 kubeadm join --control-plane 时， 在控制平面节点上会自动创建本地 etcd 成员。
+<p>
+![img](/images/posts/kubernetes/微信截图_20240412154500.png)<br>
 
+- [外部etcd拓扑--外部etcd集群]() <br>
+<p align="left" style="color:grey; font-family:Arial; font-size: 15px">
 
+</p>
 
 
 
