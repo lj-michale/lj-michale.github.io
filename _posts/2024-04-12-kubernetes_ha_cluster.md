@@ -70,7 +70,16 @@ ACK Pro托管版K8s在全网的规模体量上万集群，具有自动弹性和�
 
 ### 高可用架构设计
 #### 单Master集群
-
+![img](/images/posts/kubernetes/微信截图_20240412154842.png)<br>
+<p align="left" style="color:grey; font-family:Arial; font-size: 15px">
+k8s集群是由一组运行k8s的节点组成的，节点可以是物理机、虚拟机或者云服务器。k8s 集群中的节点分为两种角色：master 和 node。<br>
+master节点：master 节点负责控制和管理整个集群，它运行着一些关键的组件，如 kube-apiserver、kube-scheduler、kube-controller-manager 等。<br>
+              master 节点可以有一个或多个，如果有多个 master 节点，那么它们之间需要通过 etcd 这个分布式键值存储来保持数据的一致性。<br>
+node节点：node 节点是承载用户应用的工作节点，它运行着一些必要的组件，如 kubelet、kube-proxy、container runtime 等。<br>
+          node 节点可以有一个或多个，如果有多个 node 节点，那么它们之间需要通过网络插件来实现通信和路由。<br>
+一般情况下我们会搭建单master多node集群。它是一种常见的 k8s 集群架构，它只有一个 master 节点和多个 node 节点。<br>
+这种架构的优点是简单易搭建，适合用于学习和测试 k8s 的功能和特性。这种架构的缺点是master节点成为了单点故障，如果 master 节点出现问题，那么整个集群就无法正常工作。<br>
+</p>
 #### 多master节点集群
 - [分类]()
   - 应用负载均衡集群
@@ -102,8 +111,6 @@ k8s配置高可用（HA）Kubernetes etcd集群。<br>
 1.使用堆叠（stacked）控制平面节点，其中 etcd 节点与控制平面节点共存 <br>
 2.使用外部 etcd 节点，其中 etcd 在与控制平面不同的节点上运行 <br>
 </p>
-
-![img](/images/posts/kubernetes/微信截图_20240412154842.png)<br>
 
 - [集群架构]() <br>
   - [堆叠(Stacked)etcd拓扑--内置etcd集群]() <br>
