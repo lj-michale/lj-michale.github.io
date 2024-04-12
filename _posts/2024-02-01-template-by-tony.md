@@ -93,6 +93,10 @@ ACK Pro托管版K8s可以对控制面组件根据负载压力做HPA和VPA，可�
 这是蓝色的Arial字体的文本。
 </p>
 
+<p align="left" style="color:grey; font-family:Arial; font-size: 55px">
+这是灰色的Arial字体的文本。
+</p>
+
 - [文本居中]()
 ***
 <center>
