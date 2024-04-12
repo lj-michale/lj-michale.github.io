@@ -139,6 +139,14 @@ k8s配置高可用（HA）Kubernetes etcd集群。<br>
    ![img](/images/posts/kubernetes/微信截图_20240412155102.png)<br>
 
 
+### K8S HA部署
+
+
+
+
+
+
+
 
 
 
