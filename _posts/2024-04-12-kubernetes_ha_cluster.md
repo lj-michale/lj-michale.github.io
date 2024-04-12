@@ -153,20 +153,14 @@ k8s配置高可用（HA）Kubernetes etcd集群。<br>
 
 ### 名称解释
 
-|      名称       |                                         解释说明                                          |  备注   | 
-|:-------------:|:-------------------------------------------------------------------------------------:|:-----:|
-|    kubectl    |                                                                              |  |
-|  keepalived   |                                                                                       |       | 
-|    haproxy    |                                                                                       |       | 
-|      pod      |           pod是k8s的最小工作单元。每个pod包含一个或者多个容器。pod中的容器会作为一个整体被master调度到一个node上运行            |       | 
-|  controller   |  k8s通常不会直接创建pod,而是通过controller来管理pod的。controller中定义了pod的部署特性，比如有几个副本，在什么样的node上运行等。   |       | 
-|    slave1     |                                                                                       |       | 
-|    slave1     |                                                                                       |       | 
-|    slave1     |                                                                                       |       | 
-|    slave1     |                                                                                       |       | 
-|    slave1     |                                                                                       |       | 
-|    slave1     |                                                                                       |       | 
-|    slave1     |                                                                                       |       | 
+|     名称     |                                         解释说明                                          |  备注   | 
+|:----------:|:-------------------------------------------------------------------------------------:|:-----:|
+|  kubectl   |                                                                              |  |
+| keepalived |                                                                                       |       | 
+|  haproxy   |                                                                                       |       | 
+|    pod     |           pod是k8s的最小工作单元。每个pod包含一个或者多个容器。pod中的容器会作为一个整体被master调度到一个node上运行            |       | 
+| controller |  k8s通常不会直接创建pod,而是通过controller来管理pod的。controller中定义了pod的部署特性，比如有几个副本，在什么样的node上运行等。   |       | 
+|    name    |                                                                                       |       | 
 
 
 
