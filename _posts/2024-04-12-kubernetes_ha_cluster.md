@@ -106,28 +106,28 @@ k8s配置高可用（HA）Kubernetes etcd集群。<br>
 </p>
 ![img](/images/posts/kubernetes/微信截图_20240412154842.png)<br>
 
-- 集群架构 <br>
-- [堆叠(Stacked)etcd拓扑--内置etcd集群]() <br>
-<p align="left" style="color:grey; font-family:Arial; font-size: 15px">
-堆叠（Stacked）HA集群是一种这样的拓扑，其中 etcd 分布式数据存储集群堆叠在 kubeadm 管理的控制平面节点上，作为控制平面的一个组件运行。<br>
-每个控制平面节点运行 kube-apiserver、kube-scheduler 和 kube-controller-manager 实例。 kube-apiserver 使用负载均衡器暴露给工作节点。<br>
-每个控制平面节点创建一个本地etcd成员（member），这个 etcd 成员只与该节点的 kube-apiserver 通信。 这同样适用于本地 kube-controller-manager 和 kube-scheduler 实例。<br>
-这种拓扑将控制平面和 etcd 成员耦合在同一节点上。相对使用外部 etcd 集群， 设置起来更简单，而且更易于副本管理。<br>
-然而，堆叠集群存在耦合失败的风险。如果一个节点发生故障，则etcd 成员和控制平面实例都将丢失， 并且冗余会受到影响。你可以通过添加更多控制平面节点来降低此风险。<br>
-因此，你应该为 HA 集群运行至少三个堆叠的控制平面节点。<br>
-这是 kubeadm 中的默认拓扑。当使用 kubeadm init 和 kubeadm join --control-plane 时， 在控制平面节点上会自动创建本地 etcd 成员。<br>
-<p>
+- [集群架构]() <br>
+  - [堆叠(Stacked)etcd拓扑--内置etcd集群]() <br>
+    <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
+    堆叠（Stacked）HA集群是一种这样的拓扑，其中 etcd 分布式数据存储集群堆叠在 kubeadm 管理的控制平面节点上，作为控制平面的一个组件运行。<br>
+    每个控制平面节点运行 kube-apiserver、kube-scheduler 和 kube-controller-manager 实例。 kube-apiserver 使用负载均衡器暴露给工作节点。<br>
+    每个控制平面节点创建一个本地etcd成员（member），这个 etcd 成员只与该节点的 kube-apiserver 通信。 这同样适用于本地 kube-controller-manager 和 kube-scheduler 实例。<br>
+    这种拓扑将控制平面和 etcd 成员耦合在同一节点上。相对使用外部 etcd 集群， 设置起来更简单，而且更易于副本管理。<br>
+    然而，堆叠集群存在耦合失败的风险。如果一个节点发生故障，则etcd 成员和控制平面实例都将丢失， 并且冗余会受到影响。你可以通过添加更多控制平面节点来降低此风险。<br>
+    因此，你应该为 HA 集群运行至少三个堆叠的控制平面节点。<br>
+    这是 kubeadm 中的默认拓扑。当使用 kubeadm init 和 kubeadm join --control-plane 时， 在控制平面节点上会自动创建本地 etcd 成员。<br>
+    <p>
 
-![img](/images/posts/kubernetes/微信截图_20240412154500.png)<br>
+   ![img](/images/posts/kubernetes/微信截图_20240412154500.png)<br>
 
-- [外部etcd拓扑--外部etcd集群]() <br>
-<p align="left" style="color:grey; font-family:Arial; font-size: 15px">
-具有外部 etcd 的 HA 集群是一种这样的拓扑， 其中 etcd 分布式数据存储集群在独立于控制平面节点的其他节点上运行。<br>
-就像堆叠的 etcd 拓扑一样，外部 etcd 拓扑中的每个控制平面节点都会运行 kube-apiserver、kube-scheduler 和 kube-controller-manager 实例。 <br>
-同样，kube-apiserver 使用负载均衡器暴露给工作节点。但是 etcd 成员在不同的主机上运行， 每个 etcd 主机与每个控制平面节点的 kube-apiserver 通信。 <br>
-这种拓扑结构解耦了控制平面和 etcd 成员。因此它提供了一种 HA 设置， 其中失去控制平面实例或者 etcd 成员的影响较小，并且不会像堆叠的 HA 拓扑那样影响集群冗余。 <br>
-但此拓扑需要两倍于堆叠 HA 拓扑的主机数量。 具有此拓扑的 HA 集群至少需要三个用于控制平面节点的主机和三个用于 etcd 节点的主机。<br>
-</p>
+  - [外部etcd拓扑--外部etcd集群]() <br>
+    <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
+    具有外部 etcd 的 HA 集群是一种这样的拓扑， 其中 etcd 分布式数据存储集群在独立于控制平面节点的其他节点上运行。<br>
+    就像堆叠的 etcd 拓扑一样，外部 etcd 拓扑中的每个控制平面节点都会运行 kube-apiserver、kube-scheduler 和 kube-controller-manager 实例。 <br>
+    同样，kube-apiserver 使用负载均衡器暴露给工作节点。但是 etcd 成员在不同的主机上运行， 每个 etcd 主机与每个控制平面节点的 kube-apiserver 通信。 <br>
+    这种拓扑结构解耦了控制平面和 etcd 成员。因此它提供了一种 HA 设置， 其中失去控制平面实例或者 etcd 成员的影响较小，并且不会像堆叠的 HA 拓扑那样影响集群冗余。 <br>
+    但此拓扑需要两倍于堆叠 HA 拓扑的主机数量。 具有此拓扑的 HA 集群至少需要三个用于控制平面节点的主机和三个用于 etcd 节点的主机。<br>
+   </p>
 
 ![img](/images/posts/kubernetes/微信截图_20240412155102.png)<br>
 
