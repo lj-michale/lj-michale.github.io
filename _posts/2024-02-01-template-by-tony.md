@@ -89,6 +89,10 @@ mindmap2: false
 ACK Pro托管版K8s可以对控制面组件根据负载压力做HPA和VPA，可以有效解决该痛点。
 </p>
 
+<p align="left" style="color:blue; font-family:Arial;">
+这是蓝色的Arial字体的文本。
+</p>
+
 - [文本居中]()
 ***
 <center>
