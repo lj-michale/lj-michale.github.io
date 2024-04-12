@@ -117,6 +117,7 @@ k8s配置高可用（HA）Kubernetes etcd集群。<br>
 因此，你应该为 HA 集群运行至少三个堆叠的控制平面节点。<br>
 这是 kubeadm 中的默认拓扑。当使用 kubeadm init 和 kubeadm join --control-plane 时， 在控制平面节点上会自动创建本地 etcd 成员。<br>
 <p>
+
 ![img](/images/posts/kubernetes/微信截图_20240412154500.png)<br>
 
 - [外部etcd拓扑--外部etcd集群]() <br>
@@ -127,6 +128,7 @@ k8s配置高可用（HA）Kubernetes etcd集群。<br>
 这种拓扑结构解耦了控制平面和 etcd 成员。因此它提供了一种 HA 设置， 其中失去控制平面实例或者 etcd 成员的影响较小，并且不会像堆叠的 HA 拓扑那样影响集群冗余。 <br>
 但此拓扑需要两倍于堆叠 HA 拓扑的主机数量。 具有此拓扑的 HA 集群至少需要三个用于控制平面节点的主机和三个用于 etcd 节点的主机。<br>
 </p>
+
 ![img](/images/posts/kubernetes/微信截图_20240412155102.png)<br>
 
 
