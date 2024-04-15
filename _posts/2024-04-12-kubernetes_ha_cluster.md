@@ -155,6 +155,12 @@ k8s配置高可用（HA）Kubernetes etcd集群。<br>
 - [Gitlab集成]()
 
 
+- [项目集成]()
+  - [Zadig K8s Helm]()
+
+  - [Zadig K8s Yaml]()
+
+
 
 
 
