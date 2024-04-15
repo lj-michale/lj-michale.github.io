@@ -147,7 +147,7 @@ k8s配置高可用（HA）Kubernetes etcd集群。<br>
 
 
 
-#### 基于CI/CD DevOps实现Source Code化
+#### CI/CD DevOps
 ##### zadig安装
 - [GitHub集成]()
 
