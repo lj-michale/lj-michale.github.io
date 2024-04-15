@@ -136,7 +136,7 @@ k8s配置高可用（HA）Kubernetes etcd集群。<br>
 
    ![img](/images/posts/kubernetes/微信截图_20240412155102.png)<br>
 
-### K8S HA部署
+### Kubernetes HA部署
 #### HA集群架构设计
 ![img](/images/posts/k8s/微信图片_20240406124928.png)<br>
 
@@ -146,8 +146,29 @@ k8s配置高可用（HA）Kubernetes etcd集群。<br>
 
 
 
+
+#### 基于CI/CD DevOps实现Source Code化
+##### zadig安装
+- [GitHub集成]()
+
+
+- [Gitlab集成]()
+
+
+
+
+
+
+
+
+
+
+
 ## 附录
 ### k8s pod常用运维命令
+
+
+
 
 
 
