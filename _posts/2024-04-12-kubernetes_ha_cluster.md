@@ -226,7 +226,7 @@ k8s配置高可用（HA）Kubernetes etcd集群。<br>
 - [使用kubeadm创建一个高可用etcd集群](https://v1-25.docs.kubernetes.io/zh-cn/docs/setup/production-environment/tools/kubeadm/setup-ha-etcd-with-kubeadm/)
 - [lvs+keepalived部署kubernetes(k8s)高可用集群](https://www.cnblogs.com/liuqingliang/p/12987270.html)
 - [Kubernetes核心架构与高可用集群详解](https://zhuanlan.zhihu.com/p/444114515)
-
+- [flink-helm-chart](https://artifacthub.io/packages/helm/bitnami/flink)
 
 
 
