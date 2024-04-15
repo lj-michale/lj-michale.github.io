@@ -151,16 +151,16 @@ k8s配置高可用（HA）Kubernetes etcd集群。<br>
 ##### Zadig安装
 - [项目集成]()
   - [集成来源]()
-    <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
+    ```.text
      1. Github <br>
      2. Gitlab <br>
-    </p>
+    ```
   - [集成方式]()
-    <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
+    ```.text
      1. Zadig K8s Helm <br>
      2. Zadig K8s Yaml <br>
      3. K8s 托管项目 <br>
-    </p>
+    ```
   - [Hadoop集成]()
 
   - [Spark集成]()
