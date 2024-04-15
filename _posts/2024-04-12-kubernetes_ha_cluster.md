@@ -150,17 +150,18 @@ k8s配置高可用（HA）Kubernetes etcd集群。<br>
 #### CI/CD DevOps
 ##### Zadig安装
 - [项目集成]()
-  - [集成来源]()
-    ```.text
+  - [集成来源]() <br>
+     <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
      1. Github 
      2. Gitlab 
-    ```
-  - [集成方式]()
-    ```.text
+     </p>
+  - [集成方式]() <br>
+     <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
      1. Zadig K8s Helm
      2. Zadig K8s Yaml 
      3. K8s 托管项目 
-    ```
+     </p>
+  
 ##### 项目集成    
   - [Hadoop集成]()
 
