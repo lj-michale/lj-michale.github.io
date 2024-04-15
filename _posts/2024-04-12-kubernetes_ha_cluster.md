@@ -148,7 +148,7 @@ k8s配置高可用（HA）Kubernetes etcd集群。<br>
 
 
 #### CI/CD DevOps
-##### zadig安装
+##### Zadig安装
 - [GitHub集成]()
 
 
