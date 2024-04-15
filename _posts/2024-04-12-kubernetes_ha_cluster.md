@@ -156,18 +156,39 @@ k8s配置高可用（HA）Kubernetes etcd集群。<br>
 
 
 - [项目集成]()
-  - [Zadig K8s Helm]()
+  - [集成方式]()
+    <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
+     1. Zadig K8s Helm <br>
+     2. Zadig K8s Yaml <br>
+     3. K8s 托管项目 <br>
+    </p>
+  - [Hadoop集成]()
 
-  - [Zadig K8s Yaml]()
+  - [Spark集成]()
 
+  - [Flink集成]()
 
+  - [Piamon集成]()
 
+  - [Kyuubi集成]()
 
+  - [Iceberg集成]()
 
+  - [DolphinScheduler集成]()
 
+  - [Doris集成]()
 
+  - [Pulsar集成]()
 
+  - [Seatunel集成]()
 
+  - [Celeborn集成]()
+
+  - [Prometheus集成]()
+
+  - [StreamPark集成]()
+
+  - [Nacos集成]()
 
 
 ## 附录
