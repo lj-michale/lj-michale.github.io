@@ -229,7 +229,7 @@ k8s配置高可用（HA）Kubernetes etcd集群。<br>
 - [flink-helm-chart](https://artifacthub.io/packages/helm/bitnami/flink)
 - [Artifact Hub](https://artifacthub.io/)
 - [Helm-chart学习-简单介绍与使用](https://blog.csdn.net/checkjiji/article/details/125669811)
-
+- [Harbor安装](https://blog.csdn.net/L_15156024189/article/details/128815565)
 
 
 
