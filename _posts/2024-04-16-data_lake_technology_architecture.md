@@ -19,7 +19,7 @@ mindmap2: false
 ## 背景需求
 
 ## 数据湖
-### Lakehouse 架构的优势
+### Lakehouse架构的优势
 - 实现了计算存储分离 <br>
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
 旧的架构 Hadoop 计算存储都在一个集群中，若要扩容，就要计算与存储部分同时扩容，但目前，各行各业都会有庞大的数据，却不一定可以匹配足够的计算，行业现状催生了计算存储分离的需求。
@@ -47,8 +47,14 @@ mindmap2: false
 在这个方面，Flink/Spark 是当之无愧的专家。真正能打动企业迁移湖仓架构的关键是，能否将 Flink/Spark 融入湖仓架构中。
 </p>
 
-### 常见Lakehouse 架构
+### 常见Lakehouse架构
 ![img](/images/posts/bigdata/lakehouse/微信截图_20240416170314.png)<br>
+
+
+
+
+
+
 
 
 
