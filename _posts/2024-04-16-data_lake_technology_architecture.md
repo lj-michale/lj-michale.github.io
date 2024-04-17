@@ -47,6 +47,10 @@ mindmap2: false
 在这个方面，Flink/Spark 是当之无愧的专家。真正能打动企业迁移湖仓架构的关键是，能否将 Flink/Spark 融入湖仓架构中。
 </p>
 
+### 常见Lakehouse 架构
+![img](/images/posts/bigdata/lakehouse/微信截图_20240416170314.png)<br>
+
+
 
 
 
