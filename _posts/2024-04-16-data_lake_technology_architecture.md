@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  Flink | DataLake以及Lakehouse技术架构整理
+title:  Flink | Lakehouse技术架构整理
 categories: [data lake]
-description: DataLake以及Lakehouse技术架构整理
+description: Lakehouse技术架构整理
 keywords: Paimon
 mermaid: false
 sequence: false
