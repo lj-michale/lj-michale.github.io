@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  TensorFlow | TensorFlow GPU+CUDA+cuDNN全环境设置指南及安装教程
+title:  TensorFlow | TensorFlow GPU+CUDA+cuDNN全环境设置及安装教程
 categories: [TensorFlow]
-description: TensorFlow GPU+CUDA+cuDNN全环境设置指南及安装教程
+description: TensorFlow GPU+CUDA+cuDNN全环境设置及安装教程
 keywords: TensorFlow
 mermaid: false
 sequence: false
