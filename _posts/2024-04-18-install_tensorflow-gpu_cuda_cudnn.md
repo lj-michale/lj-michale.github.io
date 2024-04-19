@@ -26,18 +26,18 @@ Anaconda（3）+ Python（3.11）+ Tensorflow-gpu（2.13）+ CUDA（12.4）+ cuD
 </p>
 
 - 查看本机GPU的cuda版本 <br>
-  ![img](/images/posts/kubernetes/微信截图_20240419094626.png)<br>
+  ![img](/images/posts/algorithm/微信截图_20240419094626.png)<br>
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
   显示CUDA版本为12.4 => cuda(cudatoolkit)版本低于或等于12.4均可.
   上图红框为：显存使用/显存大小，蓝框为GPU使用率。
 </p>
 
 - 查看NVIDIA控制面板 <br>
-  ![img](/images/posts/kubernetes/微信截图_20240419095125.png)<br>
+  ![img](/images/posts/algorithm/微信截图_20240419095125.png)<br>
 
 ## 环境搭建
 ### Anaconda+Python虚拟环境安装
-  ![img](/images/posts/kubernetes/微信截图_20240419094626.png)<br>
+  ![img](/images/posts/algorithm/微信截图_20240419094626.png)<br>
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
 
 </p>
