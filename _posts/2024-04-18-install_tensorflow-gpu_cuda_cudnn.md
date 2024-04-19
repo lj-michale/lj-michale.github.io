@@ -99,7 +99,11 @@ Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（11.8.0）+
   
 ### 安装tensorflow-gpu
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
-
+TensorFlow 2.13.1版本需要Python版本： Requires: Python >=3.8
+安装命令：# For GPU users
+        pip install tensorflow[and-cuda]
+        # For CPU users
+        pip install tensorflow
 </p>
 
 
@@ -108,10 +112,12 @@ Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（11.8.0）+
 
   
 ## Q&A
-### CPU和GPU的区别是什么呢？
+- Q: CPU和GPU的区别是什么呢？
+- A:
 ![img](/images/posts/algorithm/20210602164302297.png)<br>
 
-### cuDNN的主要特性
+- Q: cuDNN的主要特性
+- A:
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
 1. 为各种常用卷积实现了 Tensor Core 加速，包括 2D 卷积、3D 卷积、分组卷积、深度可分离卷积以及包含 NHWC 和 NCHW 输入及输出的扩张卷积 <br>
 2. 为诸多计算机视觉和语音模型优化了内核，包括 ResNet、ResNext、EfficientNet、EfficientDet、SSD、MaskRCNN、Unet、VNet、BERT、GPT-2、Tacotron2 和 WaveGlow <br>
@@ -121,7 +127,9 @@ Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（11.8.0）+
 </p>
 
 ### tensorflow2.13.1  Num GPUs Available:  0 解决
+- Q:
 ![img](/images/posts/algorithm/微信截图_20240419170749.png)<br>
+- A:
 
 
 ### 名称解释
@@ -163,3 +171,4 @@ Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（11.8.0）+
 - [Microsoft Visual Studio](https://learn.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2022#step-4---choose-workloads)
 - [Microsoft Visual Studio安装教程超详解](https://blog.csdn.net/weixin_72959097/article/details/132308653)
 - [提示Nsight compute安装失败](https://blog.csdn.net/a_joker_/article/details/129335592)
+- [Install TensorFlow 2](https://tensorflow.google.cn/install)
