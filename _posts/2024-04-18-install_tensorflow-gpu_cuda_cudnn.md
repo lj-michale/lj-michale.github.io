@@ -120,6 +120,9 @@ Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（11.8.0）+
 5. 能为各种 CNN 体系架构上的融合运算提速 <br>
 </p>
 
+### tensorflow2.13.1  Num GPUs Available:  0 解决
+![img](/images/posts/algorithm/微信截图_20240419170749.png)<br>
+
 
 ### 名称解释
 
