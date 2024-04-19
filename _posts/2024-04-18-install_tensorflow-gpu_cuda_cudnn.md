@@ -91,7 +91,14 @@ Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（11.8.0）+
 ### CPU和GPU的区别是什么呢？
 ![img](/images/posts/algorithm/20210602164302297.png)<br>
 
-
+### cuDNN的主要特性
+<p align="left" style="color:grey; font-family:Arial; font-size: 15px">
+1. 为各种常用卷积实现了 Tensor Core 加速，包括 2D 卷积、3D 卷积、分组卷积、深度可分离卷积以及包含 NHWC 和 NCHW 输入及输出的扩张卷积 <br>
+2. 为诸多计算机视觉和语音模型优化了内核，包括 ResNet、ResNext、EfficientNet、EfficientDet、SSD、MaskRCNN、Unet、VNet、BERT、GPT-2、Tacotron2 和 WaveGlow <br>
+3. 支持 FP32、FP16、BF16 和 TF32 浮点格式以及 INT8 和 UINT8 整数格式 <br>
+4. 4D 张量的任意维排序、跨步和子区域意味着可轻松集成到任意神经网络实现中 <br>
+5. 能为各种 CNN 体系架构上的融合运算提速 <br>
+</p>
 
 
 
