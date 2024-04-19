@@ -13,7 +13,9 @@ mindmap2: false
 ---
 
 ## 前言 <br>
-tensorflow:深度学习框架 -gpu 使用gpu版本 cuda:用来支持gpu进行复杂计算 cudnn:嵌入cuda的一个神经网络加速库文件 nvidia驱动:用来驱动pc的nvidia显卡。
+NVIDIA CUDA® 深度神经网络库 (cuDNN) 是一个 GPU 加速的深度神经网络基元库，能够以高度优化的方式实现标准例程（如前向和反向卷积、池化层、归一化和激活层）。
+全球的深度学习研究人员和框架开发者都依赖 cuDNN 来实现高性能 GPU 加速。借助 cuDNN，研究人员和开发者可以专注于训练神经网络及开发软件应用，而不必花时间进行低层级的 GPU 性能调整。
+cuDNN 可加速广泛应用的深度学习框架，包括 Caffe2、Chainer、Keras、MATLAB、MxNet、PaddlePaddle、PyTorch 和 TensorFlow。
 
 
 ## 准备工作
