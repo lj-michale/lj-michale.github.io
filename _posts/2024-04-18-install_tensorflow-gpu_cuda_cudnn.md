@@ -99,11 +99,11 @@ Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（11.8.0）+
   
 ### Tensorflow安装
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
-TensorFlow 2.13.1版本需要Python版本： Requires: Python >=3.8
-安装命令：# For GPU users
-        pip install tensorflow[and-cuda]
-        # For CPU users
-        pip install tensorflow
+TensorFlow 2.13.1版本需要Python版本： Requires: Python >=3.8  <br>
+安装命令：# For GPU users <br>
+        pip install tensorflow[and-cuda] <br>
+        # For CPU users <br>
+        pip install tensorflow <br>
 </p>
 
 ### Pytroch安装
@@ -175,3 +175,4 @@ TensorFlow 2.13.1版本需要Python版本： Requires: Python >=3.8
 - [Microsoft Visual Studio安装教程超详解](https://blog.csdn.net/weixin_72959097/article/details/132308653)
 - [提示Nsight compute安装失败](https://blog.csdn.net/a_joker_/article/details/129335592)
 - [Install TensorFlow 2](https://tensorflow.google.cn/install)
+- [pytorch官网](https://pytorch.org/)
