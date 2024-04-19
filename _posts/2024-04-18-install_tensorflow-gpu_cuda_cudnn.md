@@ -89,7 +89,13 @@ Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（11.8.0）+
 
 - cuDNN下载以及安装 <br>
   ![img](/images/posts/algorithm/微信截图_20240419110913.png)<br>
-
+  - cuDNN安装 <br>
+    <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
+     在D:\software\NVIDIA\CUDA\v12.4位置全部替换为cudnn-windows-x86_64-9.1.0.70_cuda12-archive中的解压文件
+    </p>
+    ![img](/images/posts/algorithm/微信截图_20240419155114.png)<br>
+  - cuDNN安装测试 <br>
+    ![img](/images/posts/algorithm/微信截图_20240419155720.png)<br>
   
 ### 安装tensorflow-gpu
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
