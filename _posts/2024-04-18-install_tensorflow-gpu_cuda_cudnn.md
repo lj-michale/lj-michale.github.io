@@ -22,7 +22,7 @@ tensorflow:深度学习框架 -gpu 使用gpu版本 cuda:用来支持gpu进行复
 ### 组件及其版本
 - 版本信息确定 <br>
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
-Anaconda（3）+ Python（3.11）+ Tensorflow-gpu（2.13）+ CUDA（12.4）+ cuDNN（8.1）
+Anaconda（3）+ Python（3.11）+ Tensorflow-gpu（2.13）+ CUDA（12.4）+ cuDNN（8.2.1）
 </p>
 
 - 查看本机GPU的cuda版本 <br>
@@ -55,6 +55,13 @@ Anaconda（3）+ Python（3.11）+ Tensorflow-gpu（2.13）+ CUDA（12.4）+ cuD
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
 
 </p>
+
+- cudnn安装 <br>
+<p align="left" style="color:grey; font-family:Arial; font-size: 15px">
+安装命令：conda install cudnn=8.2.1 -c anaconda
+在这条命令中，-c anaconda 指定了从 anaconda channel 安装包，cudnn=8.2.1 精确指定了要安装的软件包及其版本号。
+</p>
+
 
 
 ### 安装tensorflow-gpu
