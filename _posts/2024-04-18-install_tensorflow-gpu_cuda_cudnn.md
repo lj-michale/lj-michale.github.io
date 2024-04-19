@@ -44,10 +44,18 @@ Anaconda（3）+ Python（3.11）+ Tensorflow-gpu（2.13）+ CUDA（12.4）+ cuD
 </p>
 
 ### 安装CUDA与cuDNN
-- 查看本机CUDA与cuDNN可安装版本 <br>
+- 查看cuDNN可安装版本 <br>
+  ![img](/images/posts/algorithm/微信截图_20240419093020.png)<br>
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
 
 </p>
+
+- 查看CUDA可安装版本 <br>
+  ![img](/images/posts/algorithm/微信截图_20240419092855.png)<br>
+<p align="left" style="color:grey; font-family:Arial; font-size: 15px">
+
+</p>
+
 
 ### 安装tensorflow-gpu
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
