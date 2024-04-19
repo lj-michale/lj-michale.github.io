@@ -28,7 +28,7 @@ Anaconda（3）+ Python（3.11）+ Tensorflow-gpu（2.13）+ CUDA（12.4）+ cuD
 - 查看本机GPU的cuda版本 <br>
   ![img](/images/posts/algorithm/微信截图_20240419094626.png)<br>
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
-  显示CUDA版本为12.4 => cuda(cudatoolkit)版本低于或等于12.4均可.
+  显示CUDA版本为12.4 => cuda(cudatoolkit)版本低于或等于12.4均可（可向下兼容）.
   上图红框为：显存使用/显存大小，蓝框为GPU使用率。
 </p>
 
@@ -93,4 +93,4 @@ Anaconda（3）+ Python（3.11）+ Tensorflow-gpu（2.13）+ CUDA（12.4）+ cuD
 - [下载安装CUDA](https://developer.nvidia.com/cuda-downloads?target_os=Windows)
 - [Win11极速安装Tensorflow-gpu+CUDA+cudnn](https://blog.csdn.net/weixin_46713695/article/details/135038527)
 - [Tensorflow与Python、CUDA、cuDNN的版本对应表](https://blog.csdn.net/ly869915532/article/details/124542362)
-
+- [Windows安装GPU版本的tensorflow+CUDA+CUDNN（超详细）](https://blog.csdn.net/m0_46093829/article/details/122893287/)
