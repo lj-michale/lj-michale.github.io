@@ -16,8 +16,6 @@ mindmap2: false
 tensorflow:深度学习框架 -gpu 使用gpu版本 cuda:用来支持gpu进行复杂计算 cudnn:嵌入cuda的一个神经网络加速库文件 nvidia驱动:用来驱动pc的nvidia显卡。
 
 
-
-
 ## 准备工作
 ### 组件及其版本
 - 版本信息确定 <br>
@@ -70,6 +68,7 @@ Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（11.8.0）+
 
 #### 下载安装
 - CUDA的下载以及安装 <br>
+  ![img](/images/posts/algorithm/微信截图_20240419110600.png)<br>
 
 - cuDNN下载以及安装 <br>
 
@@ -128,4 +127,5 @@ Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（11.8.0）+
 - [cuDNN下载链接](https://developer.nvidia.cn/cudnn)
 - [cuda-toolkit-archive](https://developer.nvidia.com/cuda-toolkit-archive)
 - [cudnn-downloads](https://developer.nvidia.com/cudnn-downloads)
-
+- [python&anconda系列（亲测有效）：window11系统CUDA、cuDNN 安装以及环境变量配置](https://blog.csdn.net/weixin_54626591/article/details/135183720)
+- [在win11使用4070s显卡作为GPU 配置pytorch](https://blog.csdn.net/qq_37344058/article/details/135964731)
