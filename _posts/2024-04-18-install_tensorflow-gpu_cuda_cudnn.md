@@ -69,7 +69,8 @@ Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（11.8.0）+
 #### 下载安装
 - CUDA的下载以及安装 <br>
   ![img](/images/posts/algorithm/微信截图_20240419110600.png)<br>
-
+  - Microsoft Visual Studio安装 <br>
+    ![img](/images/posts/algorithm/微信截图_20240419151606.png)<br>
 - cuDNN下载以及安装 <br>
   ![img](/images/posts/algorithm/微信截图_20240419110913.png)<br>
 
@@ -135,3 +136,5 @@ Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（11.8.0）+
 - [python&anconda系列（亲测有效）：window11系统CUDA、cuDNN 安装以及环境变量配置](https://blog.csdn.net/weixin_54626591/article/details/135183720)
 - [在win11使用4070s显卡作为GPU 配置pytorch](https://blog.csdn.net/qq_37344058/article/details/135964731)
 - [NVIDIA开发者社区](https://developer.nvidia.cn/)
+- [Microsoft Visual Studio](https://learn.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2022#step-4---choose-workloads)
+- [Microsoft Visual Studio安装教程超详解](https://blog.csdn.net/weixin_72959097/article/details/132308653)
