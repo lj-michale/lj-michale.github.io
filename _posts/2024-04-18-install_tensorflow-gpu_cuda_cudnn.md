@@ -107,6 +107,7 @@ TensorFlow 2.13.1版本需要Python版本： Requires: Python >=3.8  <br>
 </p>
 
 ### Pytroch安装
+![img](/images/posts/algorithm/微信截图_20240419174814.png)<br>
 ![img](/images/posts/algorithm/微信截图_20240419174315.png)<br>
 
 
