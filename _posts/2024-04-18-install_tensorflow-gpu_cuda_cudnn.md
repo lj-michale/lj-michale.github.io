@@ -28,10 +28,13 @@ Anaconda（3）+ Python（3.11）+ Tensorflow-gpu（2.13）+ CUDA（12.4）+ cuD
 ## 环境搭建
 ### 版本信息确定
 - 查看本机GPU的cuda版本 <br>
-  ![img](/images/posts/kubernetes/微信截图_20240419094324.png)<br>
+  ![img](/images/posts/kubernetes/微信截图_20240419094626.png)<br>
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
-
+  显示CUDA版本为12.4 => cuda(cudatoolkit)版本低于或等于12.4均可.
+  上图红框为：显存使用/显存大小，蓝框为GPU使用率。
 </p>
+
+
 
 
 
