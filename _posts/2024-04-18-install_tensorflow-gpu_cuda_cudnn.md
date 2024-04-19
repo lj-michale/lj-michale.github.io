@@ -37,7 +37,8 @@ Anaconda（3）+ Python（3.11）+ Tensorflow-gpu（2.13）+ CUDA（12.4）+ cuD
 
 ## 环境搭建
 ### Anaconda+Python虚拟环境安装
-  ![img](/images/posts/algorithm/微信截图_20240419094626.png)<br>
+  ![img](/images/posts/algorithm/微信截图_20240419100022.png)<br>
+  ![img](/images/posts/algorithm/微信截图_20240419100125.png)<br>
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
 
 </p>
