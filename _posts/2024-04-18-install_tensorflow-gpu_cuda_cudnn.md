@@ -34,6 +34,8 @@ Anaconda（3）+ Python（3.11）+ Tensorflow-gpu（2.13）+ CUDA（12.4）+ cuD
   上图红框为：显存使用/显存大小，蓝框为GPU使用率。
 </p>
 
+- 查看NVIDIA控制面板 <br>
+  ![img](/images/posts/kubernetes/微信截图_20240419095125.png)<br>
 
 
 
