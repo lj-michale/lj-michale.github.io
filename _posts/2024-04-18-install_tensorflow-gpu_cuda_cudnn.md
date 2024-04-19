@@ -22,7 +22,7 @@ tensorflow:深度学习框架 -gpu 使用gpu版本 cuda:用来支持gpu进行复
 ### 组件及其版本
 - 版本信息确定 <br>
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
-Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（12.4）+ cuDNN（8.9.2）
+Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（11.8.0）+ cuDNN（8.9.2）
 </p>
 
 - 查看本机GPU的cuda版本 <br>
@@ -56,9 +56,10 @@ Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（12.4）+ c
 
 </p>
 
+#### 命令安装
 - cuDNN安装 <br>
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
-安装命令：conda install cudnn=8.2.1 -c anaconda <br>
+安装命令：conda install cudnn=8.9.2 -c anaconda <br>
 在这条命令中，-c anaconda 指定了从 anaconda channel 安装包，cudnn=8.2.1 精确指定了要安装的软件包及其版本号。
 </p>
 
@@ -66,6 +67,14 @@ Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（12.4）+ c
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
 安装命令：
 </p>
+
+#### 下载安装
+- CUDA的下载以及安装 <br>
+
+- cuDNN下载以及安装 <br>
+
+
+
 
 ### 安装tensorflow-gpu
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
@@ -117,6 +126,6 @@ Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（12.4）+ c
 - [搭建CUDA11.8.0+cuDNN8.9.2+python3.11.4+anaconda23.5.2环境的过程记录](https://blog.csdn.net/mugua_JC/article/details/131849295)
 - [CUDA下载链接](https://developer.nvidia.cn/cuda-downloads)
 - [cuDNN下载链接](https://developer.nvidia.cn/cudnn)
-
-
+- [cuda-toolkit-archive](https://developer.nvidia.com/cuda-toolkit-archive)
+- [cudnn-downloads](https://developer.nvidia.com/cudnn-downloads)
 
