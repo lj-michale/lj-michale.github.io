@@ -26,8 +26,12 @@ Anaconda（3）+ Python（3.11）+ Tensorflow-gpu（2.13）+ CUDA（12.4）+ cuD
 
 
 ## 环境搭建
+### 版本信息确定
+- 查看本机GPU的cuda版本 <br>
+  ![img](/images/posts/kubernetes/微信截图_20240419094324.png)<br>
+<p align="left" style="color:grey; font-family:Arial; font-size: 15px">
 
-
+</p>
 
 
 
@@ -44,17 +48,17 @@ Anaconda（3）+ Python（3.11）+ Tensorflow-gpu（2.13）+ CUDA（12.4）+ cuD
 
 ### 名称解释
 
-|     名称      |                                          解释说明                                           |  备注   | 
-|:-----------:|:---------------------------------------------------------------------------------------:|:-----:|
-| tensorflow  |                                         深度学习框架                                          |  |
-|    cuda     |   CUDA是显卡厂商NVIDIA推出的运算平台。CUDA™是一种由NVIDIA推出的通用并行计算架构，是一种并行计算平台和编程模型，该架构使GPU能够解决复杂的计算问题   |  |
-|    cudnn    |   cuDNN的全称为NVIDIA CUDA® Deep Neural Network library，是NVIDIA专门针对深度神经网络中的基础操作而设计基于GPU的加速库。                                    |  |
-|  nvidia驱动   |                                     用来驱动pc的nvidia显卡                                     |  |
-|  GPU   |       显卡是我们平时说的GPU，现在大多数的电脑使用NVIDIA公司生产的显卡；常见的型号有Tesla V100，GTX950M，GTX1050TI，GTX1080等  |  |
-|  CUDA Toolkit   |     CUDA工具包的主要包含了CUDA-C和CUDA-C++编译器、一些科学库和实用程序库、CUDA和library API的代码示例、和一些CUDA开发工具。      |  |
-|  NVCC   |                NVCC就是CUDA的编译器,可以从CUDA Toolkit的/bin目录中获取,类似于gcc就是c语言的编译器。                |  |
-|     |                                                                                         |  |
-|     |                                                                                         |  |
+|      名称      |                                          解释说明                                          |  备注   | 
+|:------------:|:--------------------------------------------------------------------------------------:|:-----:|
+|  tensorflow  |                                         深度学习框架                                         |  |
+|     cuda     |  CUDA是显卡厂商NVIDIA推出的运算平台。CUDA™是一种由NVIDIA推出的通用并行计算架构，是一种并行计算平台和编程模型，该架构使GPU能够解决复杂的计算问题   |  |
+|    cudnn     | cuDNN的全称为NVIDIA CUDA® Deep Neural Network library，是NVIDIA专门针对深度神经网络中的基础操作而设计基于GPU的加速库。 |  |
+|  nvidia驱动    |                                     用来驱动pc的nvidia显卡                                    |  |
+|     GPU      |    显卡是我们平时说的GPU，现在大多数的电脑使用NVIDIA公司生产的显卡；常见的型号有Tesla V100，GTX950M，GTX1050TI，GTX1080等    |  |
+| CUDA Toolkit |     CUDA工具包的主要包含了CUDA-C和CUDA-C++编译器、一些科学库和实用程序库、CUDA和library API的代码示例、和一些CUDA开发工具。     |  |
+|     NVCC     |               NVCC就是CUDA的编译器,可以从CUDA Toolkit的/bin目录中获取,类似于gcc就是c语言的编译器。                |  |
+|              |                                                                                        |  |
+|              |                                                                                        |  |
 
 
 
