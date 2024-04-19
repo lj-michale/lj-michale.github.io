@@ -97,7 +97,7 @@ Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（11.8.0）+
   - cuDNN安装测试 <br>
     ![img](/images/posts/algorithm/微信截图_20240419155720.png)<br>
   
-### 安装tensorflow-gpu
+### Tensorflow安装
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
 TensorFlow 2.13.1版本需要Python版本： Requires: Python >=3.8
 安装命令：# For GPU users
@@ -105,6 +105,9 @@ TensorFlow 2.13.1版本需要Python版本： Requires: Python >=3.8
         # For CPU users
         pip install tensorflow
 </p>
+
+### Pytroch安装
+![img](/images/posts/algorithm/微信截图_20240419174315.png)<br>
 
 
 ## 测试
