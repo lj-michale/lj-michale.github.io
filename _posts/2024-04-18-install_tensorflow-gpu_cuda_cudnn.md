@@ -21,7 +21,7 @@ tensorflow:深度学习框架 -gpu 使用gpu版本 cuda:用来支持gpu进行复
 ## 准备工作
 ### 组件及其版本
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
-Anaconda（3）+python（3.11）+tensorflow-gpu（2.13）+CUDA（12.4）+cuDNN（8.1）
+Anaconda（3）+ Python（3.11）+ Tensorflow-gpu（2.13）+ CUDA（12.4）+ cuDNN（8.1）
 </p>
 
 
@@ -67,6 +67,6 @@ Anaconda（3）+python（3.11）+tensorflow-gpu（2.13）+CUDA（12.4）+cuDNN�
 - [CUDA GPU](https://developer.nvidia.cn/cuda-gpus)
 - [理清GPU、CUDA、CUDA Toolkit、cuDNN关系以及下载安装](https://blog.csdn.net/qq_42406643/article/details/109545766)
 - [下载安装CUDA](https://developer.nvidia.com/cuda-downloads?target_os=Windows)
-
-
+- [Win11极速安装Tensorflow-gpu+CUDA+cudnn](https://blog.csdn.net/weixin_46713695/article/details/135038527)
+- [Tensorflow与Python、CUDA、cuDNN的版本对应表](https://blog.csdn.net/ly869915532/article/details/124542362)
 
