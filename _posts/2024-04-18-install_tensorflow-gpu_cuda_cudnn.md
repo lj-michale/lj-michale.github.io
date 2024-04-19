@@ -74,6 +74,7 @@ Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（11.8.0）+
   - CUDA安装 <br>
     ![img](/images/posts/algorithm/微信截图_20240419152343.png)<br>
     ![img](/images/posts/algorithm/微信截图_20240419152537.png)<br>
+    ![img](/images/posts/algorithm/微信截图_20240419153252.png)<br>
 
 - cuDNN下载以及安装 <br>
   ![img](/images/posts/algorithm/微信截图_20240419110913.png)<br>
@@ -142,3 +143,4 @@ Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（11.8.0）+
 - [NVIDIA开发者社区](https://developer.nvidia.cn/)
 - [Microsoft Visual Studio](https://learn.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2022#step-4---choose-workloads)
 - [Microsoft Visual Studio安装教程超详解](https://blog.csdn.net/weixin_72959097/article/details/132308653)
+- [提示Nsight compute安装失败](https://blog.csdn.net/a_joker_/article/details/129335592)
