@@ -73,7 +73,7 @@ Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（11.8.0）+
     ![img](/images/posts/algorithm/微信截图_20240419151606.png)<br>
   - CUDA安装 <br>
     ![img](/images/posts/algorithm/微信截图_20240419152343.png)<br>
-
+    ![img](/images/posts/algorithm/微信截图_20240419152537.png)<br>
 
 - cuDNN下载以及安装 <br>
   ![img](/images/posts/algorithm/微信截图_20240419110913.png)<br>
