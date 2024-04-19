@@ -87,8 +87,7 @@ Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（11.8.0）+
   
 ## Q&A
 ### CPU和GPU的区别是什么呢？
-
-
+![img](/images/posts/algorithm/20210602164302297.png)<br>
 
 
 
