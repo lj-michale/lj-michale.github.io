@@ -101,7 +101,6 @@ Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（11.8.0）+
 </p>
 
 
-
 ### 名称解释
 
 |      名称      |                                          解释说明                                          |  备注   | 
@@ -137,3 +136,4 @@ Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（11.8.0）+
 - [cudnn-downloads](https://developer.nvidia.com/cudnn-downloads)
 - [python&anconda系列（亲测有效）：window11系统CUDA、cuDNN 安装以及环境变量配置](https://blog.csdn.net/weixin_54626591/article/details/135183720)
 - [在win11使用4070s显卡作为GPU 配置pytorch](https://blog.csdn.net/qq_37344058/article/details/135964731)
+- [NVIDIA开发者社区](https://developer.nvidia.cn/)
