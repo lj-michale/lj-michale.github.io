@@ -20,13 +20,11 @@ tensorflow:深度学习框架 -gpu 使用gpu版本 cuda:用来支持gpu进行复
 
 ## 准备工作
 ### 组件及其版本
+- 版本信息确定 <br>
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
 Anaconda（3）+ Python（3.11）+ Tensorflow-gpu（2.13）+ CUDA（12.4）+ cuDNN（8.1）
 </p>
 
-
-## 环境搭建
-### 版本信息确定
 - 查看本机GPU的cuda版本 <br>
   ![img](/images/posts/kubernetes/微信截图_20240419094626.png)<br>
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
@@ -37,15 +35,20 @@ Anaconda（3）+ Python（3.11）+ Tensorflow-gpu（2.13）+ CUDA（12.4）+ cuD
 - 查看NVIDIA控制面板 <br>
   ![img](/images/posts/kubernetes/微信截图_20240419095125.png)<br>
 
+## 环境搭建
+### Anaconda+Python虚拟环境安装
+  ![img](/images/posts/kubernetes/微信截图_20240419094626.png)<br>
+<p align="left" style="color:grey; font-family:Arial; font-size: 15px">
+
+</p>
 
 
 
 
-
-
-
+  
 ## Q&A
 ### CPU和GPU的区别是什么呢？
+
 
 
 
