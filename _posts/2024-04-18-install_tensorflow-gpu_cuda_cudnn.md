@@ -97,7 +97,7 @@ Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（11.8.0）+
   - cuDNN安装测试 <br>
     ![img](/images/posts/algorithm/微信截图_20240419155720.png)<br>
   
-### Tensorflow安装
+### Installing JAX Tensorflow
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
 TensorFlow 2.13.1版本需要Python版本： Requires: Python >=3.8  <br>
 安装命令：# For GPU users <br>
@@ -106,13 +106,25 @@ TensorFlow 2.13.1版本需要Python版本： Requires: Python >=3.8  <br>
         pip install tensorflow <br>
 </p>
 
-### Pytroch安装
+### Installing Pytroch
 - 安装 <br>
 ![img](/images/posts/algorithm/微信截图_20240419174814.png)<br>
 ![img](/images/posts/algorithm/微信截图_20240419174315.png)<br>
 
 - 安装测试 <br>
   ![img](/images/posts/algorithm/微信截图_20240419175414.png)<br>
+
+
+
+### Installing JAX
+- 安装 <br>
+<p align="left" style="color:grey; font-family:Arial; font-size: 15px">
+I.CPU-only (Linux/macOS/Windows)
+pip install -U "jax[cpu]"
+
+II.GPU (NVIDIA, CUDA 12, x86_64)
+pip install -U "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+</p>
 
 
 ## 测试
@@ -181,3 +193,5 @@ TensorFlow 2.13.1版本需要Python版本： Requires: Python >=3.8  <br>
 - [提示Nsight compute安装失败](https://blog.csdn.net/a_joker_/article/details/129335592)
 - [Install TensorFlow 2](https://tensorflow.google.cn/install)
 - [pytorch官网](https://pytorch.org/)
+- [Tensorflow找不到GPU：tensorflow 2.11.0版本开始，在windows上不再支持GPU](https://blog.csdn.net/chw0629/article/details/134844419)
+- [放弃支持Windows GPU、bug多，TensorFlow被吐槽：2.0后慢慢死去](https://zhuanlan.zhihu.com/p/656241342)
