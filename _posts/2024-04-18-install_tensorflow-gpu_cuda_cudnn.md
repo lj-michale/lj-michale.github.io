@@ -126,6 +126,9 @@ II.GPU (NVIDIA, CUDA 12, x86_64)
 pip install -U "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 </p>
 
+![img](/images/posts/algorithm/微信截图_20240422171357.png)<br>
+
+
 
 ## 测试
 
