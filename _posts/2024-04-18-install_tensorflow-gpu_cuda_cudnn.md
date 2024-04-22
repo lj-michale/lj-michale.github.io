@@ -128,7 +128,13 @@ pip install -U "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/
 
 ![img](/images/posts/algorithm/微信截图_20240422171357.png)<br>
 
+- JAX nightly installation <br>
+<p align="left" style="color:grey; font-family:Arial; font-size: 15px">
+jaxlib NVIDIA GPU (CUDA 12):
+pip install -U --pre jaxlib -f https://storage.googleapis.com/jax-releases/jaxlib_nightly_cuda12_releases.html
+</p>
 
+![img](/images/posts/algorithm/微信截图_20240422172610.png)<br>
 
 ## 测试
 
@@ -198,3 +204,4 @@ pip install -U "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/
 - [pytorch官网](https://pytorch.org/)
 - [Tensorflow找不到GPU：tensorflow 2.11.0版本开始，在windows上不再支持GPU](https://blog.csdn.net/chw0629/article/details/134844419)
 - [放弃支持Windows GPU、bug多，TensorFlow被吐槽：2.0后慢慢死去](https://zhuanlan.zhihu.com/p/656241342)
+- [JAX文档](https://jax.readthedocs.io/en/latest/installation.html)
