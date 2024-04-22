@@ -119,10 +119,9 @@ TensorFlow 2.13.1版本需要Python版本： Requires: Python >=3.8  <br>
 ### Installing JAX
 - 安装 <br>
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
-I.CPU-only (Linux/macOS/Windows)
-pip install -U "jax[cpu]"
-
-II.GPU (NVIDIA, CUDA 12, x86_64)
+I.CPU-only (Linux/macOS/Windows) <br>
+pip install -U "jax[cpu]" <br>
+II.GPU (NVIDIA, CUDA 12, x86_64) <br>
 pip install -U "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 </p>
 
@@ -130,11 +129,12 @@ pip install -U "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/
 
 - JAX nightly installation <br>
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
-jaxlib NVIDIA GPU (CUDA 12):
+jaxlib NVIDIA GPU (CUDA 12): <br>
 pip install -U --pre jaxlib -f https://storage.googleapis.com/jax-releases/jaxlib_nightly_cuda12_releases.html
 </p>
 
 ![img](/images/posts/algorithm/微信截图_20240422172610.png)<br>
+
 
 ## 测试
 
@@ -205,3 +205,4 @@ pip install -U --pre jaxlib -f https://storage.googleapis.com/jax-releases/jaxli
 - [Tensorflow找不到GPU：tensorflow 2.11.0版本开始，在windows上不再支持GPU](https://blog.csdn.net/chw0629/article/details/134844419)
 - [放弃支持Windows GPU、bug多，TensorFlow被吐槽：2.0后慢慢死去](https://zhuanlan.zhihu.com/p/656241342)
 - [JAX文档](https://jax.readthedocs.io/en/latest/installation.html)
+- [JAX安装过程中遇到的各种坑](https://blog.csdn.net/xiaomianyuan/article/details/134988138)
