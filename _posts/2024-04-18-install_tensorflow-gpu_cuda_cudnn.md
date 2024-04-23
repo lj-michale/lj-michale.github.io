@@ -169,13 +169,11 @@ pip install -U --pre jaxlib -f https://storage.googleapis.com/jax-releases/jaxli
 5. 能为各种 CNN 体系架构上的融合运算提速 <br>
 </p>
 
-### tensorflow2.13.1  Num GPUs Available:  0 解决
-- Q:
+- Q: tensorflow2.13.1  Num GPUs Available:  0 解决
 ![img](/images/posts/algorithm/微信截图_20240419170749.png)<br>
 - A:
 
-### 如何查看cuDNN版本
-- Q: 
+- Q: 如何查看cuDNN版本
 - A:
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
 import torch
