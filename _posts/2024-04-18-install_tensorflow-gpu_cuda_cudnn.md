@@ -117,12 +117,21 @@ TensorFlow 2.13.1版本需要Python版本： Requires: Python >=3.8  <br>
 
 
 ### Installing JAX
-- 安装 <br>
+- 安装方式I <br>
+<p align="left" style="color:grey; font-family:Arial; font-size: 15px">
+pip3 install jax jaxlib -i https://pypi.tuna.tsinghua.edu.cn/simple
+</p>
+
+![img](/images/posts/algorithm/微信截图_20240423113240.png)<br>
+
+- 安装方式II <br>
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
 I.CPU-only (Linux/macOS/Windows) <br>
 pip install -U "jax[cpu]" <br>
 II.GPU (NVIDIA, CUDA 12, x86_64) <br>
-pip install -U "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+pip install -U "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html <br>
+或者：<br>
+pip install --upgrade jax==0.4.7 jaxlib==0.4.7+cuda11.cudnn82 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 </p>
 
 ![img](/images/posts/algorithm/微信截图_20240422171357.png)<br>
@@ -135,9 +144,12 @@ pip install -U --pre jaxlib -f https://storage.googleapis.com/jax-releases/jaxli
 
 ![img](/images/posts/algorithm/微信截图_20240422172610.png)<br>
 
-pip install --upgrade jax==0.4.12 jaxlib==0.4.12+cuda12.cudnn88 -f  https://storage.googleapis.com/jax-releases/jaxlib_nightly_cuda12_releases.html
 
-jaxlib==0.4.12+cuda12.cudnn88
+- 安装测试 <br>
+  ![img](/images/posts/algorithm/微信截图_20240423113222.png)<br>
+
+
+
 ## 测试
 
 
@@ -208,3 +220,4 @@ jaxlib==0.4.12+cuda12.cudnn88
 - [放弃支持Windows GPU、bug多，TensorFlow被吐槽：2.0后慢慢死去](https://zhuanlan.zhihu.com/p/656241342)
 - [JAX文档](https://jax.readthedocs.io/en/latest/installation.html)
 - [JAX安装过程中遇到的各种坑](https://blog.csdn.net/xiaomianyuan/article/details/134988138)
+- [安装jaxlib：与CUDA和cudnn硬件的版本可以查看](https://storage.googleapis.com/jax-releases/jax_cuda_releases.html)
