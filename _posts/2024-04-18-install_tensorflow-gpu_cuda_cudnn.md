@@ -181,6 +181,9 @@ pip install -U --pre jaxlib -f https://storage.googleapis.com/jax-releases/jaxli
 - Q: tensorflow2.13.1  Num GPUs Available:  0 解决
 ![img](/images/posts/algorithm/微信截图_20240419170749.png)<br>
 - A:
+<p align="left" style="color:grey; font-family:Arial; font-size: 15px">
+tensorflow==2.10.1 是支持windows gpu 的最后一个版本
+</p>
 
 - Q: 如何查看cuDNN版本
 - A:
