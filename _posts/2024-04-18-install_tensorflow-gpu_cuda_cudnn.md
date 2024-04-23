@@ -201,6 +201,10 @@ print(torch.backends.cudnn.version())
 
 
 
+
+
+
+
 ## 参考资料
 - [win10超全Tensorflow-gpu安装+CUDA+cuDNN+keras攻](https://blog.csdn.net/qq_42505705/article/details/83478668)
 - [Windows10下使用Conda安装TensorFlow-GPU](https://blog.csdn.net/weixin_46846685/article/details/110292801)
