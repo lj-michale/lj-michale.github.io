@@ -97,7 +97,7 @@ Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（11.8.0）+
   - cuDNN安装测试 <br>
     ![img](/images/posts/algorithm/微信截图_20240419155720.png)<br>
   
-### Installing JAX Tensorflow
+### Installing Tensorflow
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
 TensorFlow 2.13.1版本需要Python版本： Requires: Python >=3.8  <br>
 安装命令：# For GPU users <br>
@@ -135,7 +135,9 @@ pip install -U --pre jaxlib -f https://storage.googleapis.com/jax-releases/jaxli
 
 ![img](/images/posts/algorithm/微信截图_20240422172610.png)<br>
 
+pip install --upgrade jax==0.4.12 jaxlib==0.4.12+cuda12.cudnn88 -f  https://storage.googleapis.com/jax-releases/jaxlib_nightly_cuda12_releases.html
 
+jaxlib==0.4.12+cuda12.cudnn88
 ## 测试
 
 
