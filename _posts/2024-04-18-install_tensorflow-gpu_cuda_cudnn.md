@@ -174,6 +174,17 @@ pip install -U --pre jaxlib -f https://storage.googleapis.com/jax-releases/jaxli
 ![img](/images/posts/algorithm/微信截图_20240419170749.png)<br>
 - A:
 
+### 如何查看cuDNN版本
+- Q: 
+- A:
+<p align="left" style="color:grey; font-family:Arial; font-size: 15px">
+import torch
+print(torch.backends.cudnn.version())
+</p>
+
+![img](/images/posts/algorithm/微信截图_20240423113706.png)<br>
+
+
 
 ### 名称解释
 
