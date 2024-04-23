@@ -176,7 +176,7 @@ pip install -U --pre jaxlib -f https://storage.googleapis.com/jax-releases/jaxli
 - Q: 如何查看cuDNN版本
 - A:
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
-import torch
+import torch <br>
 print(torch.backends.cudnn.version())
 </p>
 
