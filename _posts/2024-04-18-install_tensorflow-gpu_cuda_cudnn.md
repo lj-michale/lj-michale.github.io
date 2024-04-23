@@ -99,6 +99,15 @@ Anaconda（3）+ Python（3.11.8）+ Tensorflow-gpu（2.13）+ CUDA（11.8.0）+
   
 ### Installing Tensorflow
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
+conda create -n tf python==3.9.13
+tensorflow对conda支持并不友好 <br>
+tensorflow==2.10.1 是支持windows gpu 的最后一个版本 <br>
+pip install	--upgrade tensorflow==2.10.1  <br>
+</p>
+
+![img](/images/posts/algorithm/微信截图_20240423143909.png)<br>
+
+<p align="left" style="color:grey; font-family:Arial; font-size: 15px">
 TensorFlow 2.13.1版本需要Python版本： Requires: Python >=3.8  <br>
 安装命令：# For GPU users <br>
         pip install tensorflow[and-cuda] <br>
