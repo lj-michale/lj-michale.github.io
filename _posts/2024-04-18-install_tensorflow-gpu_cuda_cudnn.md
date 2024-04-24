@@ -116,12 +116,24 @@ TensorFlow 2.13.1版本需要Python版本： Requires: Python >=3.8  <br>
 </p>
 
 ### Installing Pytroch
-- 安装 <br>
+- Pytroch安装 <br>
 ![img](/images/posts/algorithm/微信截图_20240419174814.png)<br>
 ![img](/images/posts/algorithm/微信截图_20240419174315.png)<br>
 
-- 安装测试 <br>
+- Pytroch安装测试 <br>
   ![img](/images/posts/algorithm/微信截图_20240419175414.png)<br>
+
+- TensorBoard安装 <br>
+<p align="left" style="color:grey; font-family:Arial; font-size: 15px">
+pip install tensorboard -i https://pypi.tuna.tsinghua.edu.cn/simple
+</p>
+
+![img](/images/posts/algorithm/微信截图_20240424153303.png)<br>
+
+- TensorBoard安装测试 <br>
+  ![img](/images/posts/algorithm/微信截图_20240424153858.png)<br>
+  ![img](/images/posts/algorithm/微信截图_20240424153845.png)<br>
+  ![img](/images/posts/algorithm/微信截图_20240424153824.png)<br>
 
 
 
@@ -194,6 +206,15 @@ print(torch.backends.cudnn.version())
 
 ![img](/images/posts/algorithm/微信截图_20240423113706.png)<br>
 
+- Q: TensorBoard简介
+- A:
+<p align="left" style="color:grey; font-family:Arial; font-size: 15px">
+TensorBoard是Google开发的一个机器学习可视化工具。其主要用于记录机器学习过程，例如：
+1.记录损失变化、准确率变化等
+2.记录图片变化、语音变化、文本变化等。例如在做GAN时，可以过一段时间记录一张生成的图片
+3.绘制模型
+</p>
+
 
 
 
@@ -248,3 +269,4 @@ print(torch.backends.cudnn.version())
 - [JAX安装过程中遇到的各种坑](https://blog.csdn.net/xiaomianyuan/article/details/134988138)
 - [安装jaxlib：与CUDA和cudnn硬件的版本可以查看](https://storage.googleapis.com/jax-releases/jax_cuda_releases.html)
 - [PyTorch下的可视化工具（网络结构/训练过程可视化）](https://blog.csdn.net/qq_42722197/article/details/131862896)
+- [PyTorch入门教学——TensorBoard使用](https://blog.csdn.net/weixin_45100742/article/details/133919886)
