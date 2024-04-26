@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  JMeter | 基于JMeter的测试环境构建、使用以及平台化
+title:  JMeter | 基于JMeter的性能测试环境构建、使用以及平台化
 categories: [JMeter]
-description: 基于JMeter的测试环境构建、使用以及平台化
+description: 基于JMeter的性能测试环境构建、使用以及平台化
 keywords: JMeter
 mermaid: false
 sequence: false
