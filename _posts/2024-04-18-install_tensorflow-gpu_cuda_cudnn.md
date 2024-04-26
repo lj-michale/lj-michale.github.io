@@ -135,8 +135,7 @@ pip install tensorboard -i https://pypi.tuna.tsinghua.edu.cn/simple
   ![img](/images/posts/algorithm/微信截图_20240424153845.png)<br>
   ![img](/images/posts/algorithm/微信截图_20240424153824.png)<br>
 
-
-
+  
 ### Installing JAX
 - 安装方式I <br>
 <p align="left" style="color:grey; font-family:Arial; font-size: 15px">
@@ -270,3 +269,4 @@ TensorBoard是Google开发的一个机器学习可视化工具。其主要用于
 - [安装jaxlib：与CUDA和cudnn硬件的版本可以查看](https://storage.googleapis.com/jax-releases/jax_cuda_releases.html)
 - [PyTorch下的可视化工具（网络结构/训练过程可视化）](https://blog.csdn.net/qq_42722197/article/details/131862896)
 - [PyTorch入门教学——TensorBoard使用](https://blog.csdn.net/weixin_45100742/article/details/133919886)
+- [TensorBoard入门——Pytorch中使用（附带案例演示）](https://blog.csdn.net/m0_61878383/article/details/136552258)
