@@ -41,3 +41,4 @@ mindmap2: false
 
 ## 参考资料
 - [Github开源项目贡献指南：如何给开源项目做贡献](https://blog.csdn.net/weixin_34050427/article/details/92720070)
+- [git常规命令操作 完整版本 git命令 git怎么提交部分代码](https://blog.csdn.net/weixin_44040867/article/details/130387040)
